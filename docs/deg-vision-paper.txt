@@ -1,0 +1,2350 @@
+Digital
+Energy Grid A vision for a unified
+energy infrastructure
+With contributions from
+© 2025, FIDE, except for Chapters 1, 2.1, 2.2
+Chapters 1, 2.1, 2.2: © 2025, IEA.
+This work is licensed under a Creative Commons
+Attribution 4.0 International License.
+Chapters 1, 2.1, 2.2 are additionally subject to IEA’s Notice for
+CC-licensed Content notice underunder the aforementioned license.
+This publication and any map included herein are without
+prejudice to the status of or sovereignty over any territory,
+to the delimitation of international frontiers and boundaries
+and to the name of any territory, city or area.
+Digital Energy Grid
+A vision for a unified energy infrastructure
+Acknowledgement
+We extend our sincere gratitude to all contributors whose
+insights, expertise, and dedication made this vision paper
+possible. Your valuable contributions and collective review
+have enriched the discussion and advanced our collective
+understanding of this subject. We appreciate your
+commitment to driving meaningful progress.
+Chapter 1-2: Contributing authors are Brendan Reidenbach,
+Sangitha Harmsen, Thomas Spencer as appointed by IEA.
+Chapter 3-8: Contributing authors are Aliya Fathima Sheriff,
+Anirban Sinha, Anusree Jayakrishnan, Dr. Pramod Varma,
+Eryn Reva Wali, Gariyasi Garg, Nandita Chandrasekhar,
+Ravi Prakash, Sujith Nair, Tanya Kak as appointed by FIDE.
+This publication is available on
+energy.becknprotocol.io
+Disclaimer: This publication has been prepared by FIDE and reflects
+FIDE’s perspectives and priorities. Contributions from IEA authors
+(as indicated) offer insights in specific areas. The publication does
+not necessarily reflect the views of the IEA Secretariat or the IEA’s
+individual member countries and does not constitute professional
+advice on any specific issue or situation. The IEA makes no
+representation or warranty, express or implied, in respect of the
+publication’s contents (including its completeness or accuracy)
+and shall not be responsible for any use of, or reliance on, it.
+5Digital Energy GridA vision for a unified energy infrastructureFIDE
+FIDE, or Foundation for Interoperability in Digital Economy (fide.org), is a
+not-for-profit organisation that fosters an open, inclusive, decentralised and
+fair digital economy through interoperable open standards and architecture.
+FIDE achieves this by promoting innovation and co-creation among partic-
+ipants in the digital ecosystem through the interoperable, open specifications
+for digital economic transactions, Beckn Protocol (becknprotocol.io) (or
+Beckn in short), of which it is the genesis author.
+Beckn Protocol, first published in October 2019, is governed under a Creative
+Commons Licence and maintained as a digital public good. FIDE promotes
+Beckn globally in a pro-bono advisory role to enable innovation and co-cre-
+ation among ecosystem participants. Beckn represents a paradigm shift
+from platforms to open protocols, offering universality and decentralisation
+modelled on the design principles of the Internet.
+IEA
+IEA, or the International Energy Agency (iea.org), works with governments
+and industry to shape a secure and sustainable energy future for all. The IEA
+is at the heart of global dialogue on energy, providing authoritative analysis,
+data, policy recommendations, and real-world solutions to help countries
+provide secure and sustainable energy for all. The IEA was created in 1974 to
+help co-ordinate a collective response to major disruptions in the supply of
+oil. While oil security remains a key aspect of our work, the IEA has evolved
+and expanded significantly since its foundation.
+Taking an all-fuels, all-technology approach, the IEA recommends policies
+that enhance the reliability, affordability and sustainability of energy. It exam-
+ines the full spectrum issues including renewables, oil, gas and coal supply
+and demand, energy efficiency, clean energy technologies, electricity systems
+and markets, access to energy, demand-side management, and much more.
+Since 2015, the IEA has opened its doors to major emerging countries to
+expand its global impact, and deepen cooperation in energy security, data
+and statistics, energy policy analysis, energy efficiency, and the growing use
+of clean energy technologies.
+About
+FIDE & IEA
+6Digital Energy GridA vision for a unified energy infrastructureForeword
+We stand at a pivotal moment in the global energy transition. The convergence
+of decentralisation, digitalisation, and surging demand is reshaping the energy
+landscape, presenting unprecedented opportunities alongside formidable chal-
+lenges. At the heart of this transformation lies the need to seamlessly manage
+three critical flows: information, energy, and transactions across a decentralised
+and diverse ecosystem. Addressing these challenges requires more than just
+advanced physical infrastructure—it demands a unified, interoperable frame-
+work that integrates data, resources, and stakeholders. This is where the vision
+of the Digital Energy Grid (DEG) becomes truly transformative.
+DEG envisions a future where universal digital building blocks—identity,
+machine-readable data, and verifiable transactions—create an interoperable
+backbone for the energy ecosystem. By digitising assets, participants, and
+transactions, DEG addresses systemic inefficiencies, reduces transactional
+frictions, and unlocks cascading benefits across industries. This approach
+moves beyond isolated solutions, embracing a shared, scalable framework that
+can trigger a flywheel effect of innovation and combinatorial value.
+One of the most exciting aspects of the DEG is its potential to enable symbi-
+otic relationships between energy and technology. Take, for instance, the syn-
+ergy between DEG and Artificial Intelligence (AI). By harmonising fragmented
+data streams and enabling transaction-ready datasets, DEG enhances AI’s
+contextual intelligence, driving superior strategic insights and real-time deci-
+sion-making. In turn, AI amplifies DEG’s potential, enabling adaptive energy
+management, precise demand forecasting, and dynamic grid optimisation.
+Together, they can establish a dynamic, agentic energy ecosystem where
+AI-driven systems autonomously optimise supply-demand equilibria, enable
+real-time market transactions, and seamlessly integrate information, energy,
+and financial flows at scale.
+This paper marks a significant step toward realising this vision in collaboration
+with the International Energy Agency (IEA), an organisation at the forefront of
+global energy cooperation. The IEA’s leadership in fostering international col-
+laboration and bringing together diverse perspectives is pivotal to navigating
+the complexities of the energy transition. Their involvement underscores the
+importance of a coordinated, global approach to building the energy systems
+of the future.
+However, realising this vision will require collective action. I invite stakeholders
+across the energy ecosystem—governments, industries, innovators, and com-
+munities—to join us in shaping this transformative future. Together, we can build
+a Digital Energy Grid that not only addresses the challenges of today but also
+lays the foundation for a sustainable, resilient, and inclusive energy future.
+The time to act is now!
+Nandan Nilekani
+Co-founder
+FIDE
+7Digital Energy GridA vision for a unified energy infrastructureDigitalisation is a key trend across our economies and the energy sector is no
+exception: vast quantities of data are gathered, interpreted and acted upon
+every day to manage the increasing complexity of energy markets.
+In our 2024 World Energy Outlook we showed that the world is entering into
+the Age of Electricity, as this unique “fuel” plays an increasingly crucial role in
+all economies in the world. Demand for electricity is set to grow six times faster
+than overall energy demand to 2035. This is due partly to traditional uses like
+air conditioning and industrial motors, but also to new sectors such as electric
+vehicles and data centres.
+One aspect the Age of Electricity is the growth of cost competitive renewable
+sources of electricity generation. In 2024, 80% of global capacity additions of
+electricity generation capacity came from low-emissions sources, and solar
+PV is leading the way. In 2024, the world added so much solar PV capacity that
+the output from new installations in this year alone could power the entire
+country of Korea. At the same time, generation from the world’s nuclear reac-
+tors is on track to reach new heights in 2025.
+These trends create huge opportunities to deliver the energy people need,
+more efficiently, affordably and productively, but also with lower emissions. But
+it also creates challenges.
+One of these is balancing an increasingly variable, decentralised and digitalised
+electricity grid. IEA analysis shows that the demand for electricity system flex-
+ibility, or the ability of the electricity system to adjust supply and demand to
+ensure they always match, will increase by 2.5 times in Europe to 2035. Meeting
+this will require flexibility from all parts of the system, with a growing contribu-
+tion from the smart combination of battery storage and demand response.
+This will require facilitating the ability of system operators to communicate
+with millions, indeed billions, of distributed devices, from behind-the-meter
+battery storage to electric vehicles to air conditioning units. It will necessitate
+flows of data, new markets, and new incentives.
+At the IEA, we have always welcomed big new ideas. We need them to solve
+the challenges we face and realise the opportunities ahead. FIDE’s idea of a
+“Digital Energy Grid” – an overarching digital framework that facilitates more
+interconnectivity between energy assets – is an example. FIDE’s work – includ-
+ing this new report, to which the IEA is pleased to have contributed – provides
+thought leadership about how we can design the long-term frameworks to rise
+to these changes. Bringing these perspectives together is key to find solutions.
+Dr. Fatih Birol
+Executive Director
+IEA
+8Digital Energy GridA vision for a unified energy infrastructureThe global energy landscape is undergoing a transformative shift, driven by
+decentralisation, digitalisation, and surging demand from electrification and
+economic growth. These shifts are reshaping how energy is produced, distrib-
+uted, and consumed, presenting both unprecedented opportunities and com-
+plex challenges.
+By 2035, nearly 3668 GW of rooftop solar PV is expected to be installed glob-
+ally—a staggering 429% increase from today1
+. This expansion underscores the
+promise of decentralized renewables but also highlights the difficulty of man-
+aging distributed and variable resources. Global electricity demand is projected
+to nearly double by 20502 under current policies and could rise even further
+under more ambitious scenarios. Key contributors include the electrification
+of heating, transport, industrial processes and increased energy demands from
+data centres. Emerging markets and developing economies are expected to
+drive nearly 80% of this growth by 20303
+.
+This rapid demand growth and the proliferation of distributed energy resources
+(DERs) expose the urgent need for better coordination across the energy
+ecosystem. Technologies such as heat pumps and air conditioners are
+increasing demand sensitivity to temperature fluctuations, while extreme
+weather events like heatwaves place additional strain on power systems.
+Electrification is also altering hourly demand patterns, with peak demand rising
+faster than average demand in many locations —requiring significant investment
+in grid infrastructure.
+While policy-driven, market-based, and technological solutions exist to address
+these challenges, many are purpose-specific, targeting isolated issues rather
+than systemic needs. Current solutions, often fragmented and non-interoper-
+able impede the seamless integration of resources and stakeholders. For
+instance, limited grid visibility complicates the integration of variable renewables
+and DERs. Furthermore, the reliance on non-digital modes of operation exac-
+erbates these challenges. Many processes lack portable, verifiable digital records,
+leading to information asymmetry and trust issues. Physical certifications for
+equipment that cannot be digitally verified and energy transactions without
+digital records hinder transparency, increase costs, and limit coordination.
+These fragmented and non-digital practices leave the ecosystem ill-equipped
+to adapt to the complexities of the energy transition.
+Digital solutions hold immense potential to facilitate a smooth energy transition,
+yet their impact is diminished when developed in silos. The energy ecosystem
+faces three interconnected coordination challenges of managing information
+flows, energy flows, and transaction flows seamlessly - all in a more decen-
+tralised energy systems of the future.
+Executive summary
+9Digital Energy GridA vision for a unified energy infrastructureAddressing these challenges requires more than advanced physical infrastruc-
+ture—it demands robust frameworks for sharing critical data such as demand,
+supply, and pricing signals. Advancements in smart devices, data analytics, and
+AI-based forecasting offer new opportunities, but physical energy systems
+remain constrained by technical, financial, and infrastructural limitations.
+The true challenge lies in synchronising the flow of information with the phys-
+ical flow of energy across diverse stakeholders and distributed resources.
+A transformative solution lies in adopting an infrastructure-led approach:
+establishing a foundational digital infrastructure that moves beyond piecemeal
+solutions to embrace a shared, scalable framework. This concept can be envi-
+sioned as a data-grid to augment the physical energy grid, designed to handle
+the complexity and variability of modern energy markets.
+At the heart of this approach is the vision for the Digital Energy Grid (DEG)
+that unifies the energy ecosystem through universal digital building blocks.
+DEG introduces key principles such as universal identity, machine readability,
+and verifiability, creating a composable, programmable, and portable digital
+infrastructure. By digitising transactions, assets, and participants in an interop-
+erable manner across the value chain, DEG creates a digital backbone of the
+energy ecosystem that enhances transparency, reliability, and adaptability.
+For example, DEG assigns universal identities to energy resources
+and actors, akin to phone numbers or postal codes, ensuring global
+uniqueness. It enables machine readability by digitising essential
+metadata such as energy ratings and certifications, enhancing
+efficiency and interoperability. Through cryptographic verifiability,
+DEG ensures tamper-proof digital records, fostering trust while
+preserving data privacy and sovereignty.
+These capabilities unlock systemic benefits: composability, programmability,
+and portability of assets and data. DEG integrates core functionalities like
+observability and secure transactions into the infrastructure, aligning the phys-
+ical flow of energy with digital information and transaction flows. This approach
+facilitates innovation and collaboration at scale, streamlining progress toward
+shared energy goals.
+10Digital Energy GridA vision for a unified energy infrastructureMuch like a road network enables trade across regions,
+DEG envisions a digital network that seamlessly
+coordinates energy, data, and value. This unified
+approach potentially addresses systemic inefficiencies,
+reduces transaction frictions, and unlocks cascading
+benefits essential for a sustainable energy transition.
+DEG is not a product or standalone technology but a vision for an interopera-
+ble, scalable, and modular digital infrastructure. It complements existing systems,
+bridging legacy standards while enabling future advancements. By reducing
+fragmentation and fostering a cohesive framework, DEG creates conditions for
+private innovation and public policy to co-evolve.
+The Digital Energy Grid offers a critical pathway to energy system transformation—
+unifying purpose-specific innovations into a cohesive energy future capable
+of addressing both anticipated and unforeseen challenges of the transition.
+11Digital Energy GridA vision for a unified energy infrastructureExecutive Summary
+Introduction
+1. We are in the middle of one of the biggest
+energy transformations in history
+2. Structural barriers, amplified by coordination
+gaps are impeding the way forward
+3. Digital Energy Grid (DEG) could augment
+the existing energy grid and embody
+infrastructure-thinking
+4. Unlocking new possibilities with DEG
+5. The DEG vision embodies scale, diversity,
+openness, and resilience for inclusive
+energy systems
+6. Through coordination, DEG can enable a wide
+range of current and future possibilities
+7. DEG and AI: A symbiotic relationship
+8. An ambitious vision meets calibrated action
+Appendix
+Glossary
+Bibliography
+8
+12
+13
+22
+28
+35
+42
+47
+56
+61
+65
+68
+70
+Table of contents
+12Digital Energy GridA vision for a unified energy infrastructureThe energy landscape is undergoing a profound transformation, driven by the
+convergence of decentralization, digitalization, and rising demand fueled by
+electrification and economic growth. This shift presents vast opportunities
+alongside critical challenges, including managing distributed and variable
+resources, rising peak demand, and the integration of climate-sensitive tech-
+nologies like heat pumps. Addressing these complexities demands a coordinated,
+infrastructure-led approach centered on a scalable digital energy grid.
+This paper presents a vision for a unified energy ecosystem capable of
+addressing the structural barriers and coordination gaps that currently impede
+progress in the energy sector. It first explores why the current energy system
+remains fragmented and fails to scale to the levels necessary for a sustainable
+future. It examines the limitations of existing solutions and the systemic bar-
+riers to progress. Next, the paper introduces an infrastructure-led approach
+as a compelling alternative to isolated solutions. This paradigm shift toward
+infrastructural thinking underpins the foundation of the Digital Energy Grid
+(DEG). The paper explores the specifics of DEG—what it is, what it is not, and
+the transformative possibilities it unlocks for the energy ecosystem of tomor-
+row. Finally, it outlines how DEG can be implemented at a high level.
+The paper presents a vision, not a definitive solution, aiming to spur global
+dialogue and collaboration among stakeholders to advance this approach,
+amplify ongoing efforts, and progress toward a unified architecture for a more
+efficient, sustainable, and equitable energy ecosystem.
+Introduction
+01
+We are in the middle of
+one of the biggest energy
+transformations in history
+14Digital Energy GridA vision for a unified energy infrastructureThe global energy landscape is undergoing one of the most profound trans-
+formations in history. This is driven by an urgent need for decarbonization, rapid
+growth in energy demand, and breakthroughs in technology that are changing
+how electricity is produced, distributed, and consumed.
+An estimated 748.5 million people worldwide still lack access to electricity4 ,
+a reminder of the challenges facing today’s energy sector: ensuring universal
+access while pursuing a secure, resilient, and sustainable energy future.
+Addressing these challenges will require a comprehensive approach—signif-
+icant investments in physical grid infrastructure to extend access to under-
+served regions, along with the deployment of clean energy systems such as
+renewables to expand generation capacity in a sustainable way. A future-ready
+energy infrastructure becomes essential to support this increasingly decen-
+tralized landscape.
+1.1
+Energy demand is soaring with electrification,
+economic growth, heating and cooling needs.
+Meeting this growing demand sustainably is
+a challenge that highlights the need for
+greater efficiency
+Recent data show that over the past decade, global energy demand increased
+at an average rate of 1.4% per year, with emerging economies hitting rates as
+high as 2.56%. Global electricity demand growth in 2024 was forecast to reach
+4.2%, among the highest levels in the past two decades. Under current policies,
+electricity demand could nearly double by 2050, with more ambitious policy
+scenarios likely driving it higher still 5
+. Various forces contribute to this increase,
+including the electrification of heating, transport, and industrial processes,
+rising demand from data centers, and a higher prevalence of household appli-
+ances. Although renewables continue to grow their share of the electricity mix,
+the pace must accelerate substantially to meet international climate targets
+and still ensure reliable, affordable, and secure electricity access—especially
+in low- and middle-income countries.
+Electric mobility is a major driver reshaping electricity usage. The market share
+of electric vehicles (battery electric and plug-in hybrids) was expected to be
+around 20.9% of global sales in 2024 and could climb to 43.4% by 2030. By
+then, nearly one in six cars in the global fleet is projected to be electric, with a
+Electrification of vehicles
+15Digital Energy GridA vision for a unified energy infrastructurecombined potential energy storage capacity of over 16 TWh— equivalent to over
+six times the global BESS (Battery Energy Storage System) capacity of 2.46 TWh
+in 20306. Although EVs raise power demand, they also offer flexibility: with vehi-
+cle-to-grid (V2G) technologies, individual owners can supply stored battery
+energy back to the grid during peak times if robust energy management systems
+are in place.
+The year 2024 marked the hottest on record—the first time the world crossed
+the 1.5-degree threshold, with the global average temperature hitting 1.6 degrees
+above pre-industrial levels7. As incomes rise and heatwaves and extreme weather
+become more frequent, electricity demand for cooling is set to surge, turning
+air-conditioning from a luxury into a necessity for millions. Residential demand
+for space cooling could more than triple by 2050 under current policy sce-
+narios. By 2030, the global air-conditioner stock is likely to exceed 2.1 billion
+units, a 36.8% climb from today. Heat pump adoption is also on the rise, with
+their share in residential heating equipment sales expected to reach 22% by
+2030, for a total capacity of 1.88 TW8. All this underscores how weather-driven
+loads are increasingly shaping electricity demand patterns.
+Increasing heating and cooling needs
+The energy demands of data centers are evolving alongside advancements in
+AI. While training AI models has historically driven exponential growth in com-
+putational power—doubling roughly every five to six months since 20109 —recent
+innovations, such as more comprehensive architectures and new inference
+techniques, suggest that this trend may not be linear. Nevertheless, large-scale
+data centers continue to consume vast amounts of electricity, sometimes
+equivalent to that of 100,000 households10
+. While global data centers account
+for around 1% of total electricity consumption11
+, the load can be heavily con-
+centrated regionally. In Virginia, for instance, data centers already account for
+over a quarter of the state’s total electricity consumption12
+. Technology com-
+panies often aim to power these facilities with renewables, making them some
+of the largest corporate purchasers of renewable energy—but that requires
+accurate, timely information on grid capacity and permitting rules. As data
+centers expand rapidly, planners face the possibility that renewable capacity
+may not keep pace with new demand, raising the risk of local or even regional
+energy shortages. This dynamic brings new urgency to the need for coordina-
+tion across infrastructure, finance, and policy to secure adequate, sustainable
+electricity supplies.
+Data centers
+16Digital Energy GridA vision for a unified energy infrastructureOne of the most important developments is the increase in variable sources of
+renewable electricity generation, especially from solar PV and wind. Generation
+from solar PV and wind combined is projected to nearly triple between 2023
+and 2030 under current policy trends, with solar PV alone driving roughly 80%
+of that capacity growth. In 2023, fossil fuels constituted 60.1% of global elec-
+tricity supply, typically from centralized thermal power plants, but that share is
+projected to decline to 44% by 2030. Over the same period, capacity additions
+in solar PV and wind are forecast to contribute over 90% of the net increase in
+electricity supply, pointing to a marked shift in the global power mix. By 2030,
+wind and solar together are expected to comprise about 30.6% of global elec-
+tricity supply and substantially higher proportions in certain key markets—44.1%
+in Europe, 24.4% in India, 38.5% in China, and 34.5% in the United States13
+.
+Growth in variable renewables
+1.2
+Innovations in variable renewables, distributed
+resources, and batteries are reshaping energy
+systems—but also testing grid stability
+1950
+75
+150
+225
+300
+EJ
+1975 2000 2023 2050
+Clean energy Oil Coal Natural gas OtherIEA. CC BY 4.0.
+Figure 1. Global energy mix by scenario to 2050
+in the Stated Policies Scenario - A scenario
+based on today’s policy settings sees clean
+energy poised for huge growth, while coal, oil and
+natural gas each reach a peak by 2030
+and then start to decline14
+.
+Notes. EJ - exajoules. Oil, coal and natural gas
+refer to unabated uses as well as non-energy
+use. Clean energy includes renewables, modern
+bioenergy, nuclear, abated fossil fuels, low-
+emissions hydrogen and hydrogen-based fuels.
+Other includes traditional use of biomass and
+non-renewable waste.
+17Digital Energy GridA vision for a unified energy infrastructureWithin the trend of variable renewables, distributed energy technologies like
+rooftop solar PV and community wind projects are growing in importance. As
+of today, installed global solar PV capacity stands at about 1,610 GW, with roughly
+43.1% as rooftop solar. By 2035, total rooftop and utility-scale solar PV installations
+could increase by over five times, pushing rooftop solar specifically to around
+3,700 GW—an enormous 429% jump from current levels15
+. Distributed energy
+resources (DERs) bring generation closer to load centers, reducing transmission
+losses while enhancing grid resilience. Yet managing widespread, small-scale,
+and intermittent sources poses operational and regulatory challenges across
+many parts of the world.
+Energy storage is proving pivotal for integrating higher shares of renewables,
+helping to smooth out intermittency. While pumped hydro and other forms of
+energy storage remain significant, battery energy storage systems (BESS) are
+expected to account for 90% of the growth in storage capacity in the coming
+years16
+. Battery storage capacity is projected to increase nearly tenfold from
+88.8 GW in 2023 to over 850 GW, with the average duration increasing from
+around two hours today to nearly three hours in 2030. Approximately 38% of
+current BESS capacity—about 33 GW—operates behind the meter (for exam-
+ple, in homes and businesses). By 2030, the total behind-the-metre BESS
+power capacity is expected to grow more than fivefold to nearly 180 GW, with
+over half of this capacity in China. Utility-scale batteries could increase by over
+twelvefold, from 55.1 GW now to more than 675.3 GW by 203017. These trends
+reinforce that DERs and battery innovations can bring major benefits in resil-
+ience and adaptability for a low-carbon transition.
+Increasing use of distributed technologies
+Digital technologies—smart meters, demand-response-enabling appliances,
+and IoT-based controls—are multiplying, making it possible to engage end users
+in grid operations in ways previously unthinkable. Tools such as Grid Orches-
+tration Software, Network Modelling, and Distributed Energy Resource Man-
+agement Systems (DERMS) enable real-time monitoring and grid flexibility,
+supporting renewable integration especially in high-income countries. By 2022,
+the number of smart power meters worldwide surpassed one billion, a tenfold
+jump from 2010. Meanwhile, connected devices with automated controls and
+sensors are expected to reach 13 billion in 2023, up from fewer than 1 billion a
+decade ago18 . Early examples include peer-to-peer energy trading pilots in
+Australia19 and solar buy-back schemes in parts of the United States 20
+, which
+allow consumers to transact at micro scales. As these approaches expand,
+dynamic pricing is likely to become more prevalent, potentially boosting the
+responsiveness of end users.
+Demand response and grid management
+enabled by digitalization
+18Digital Energy GridA vision for a unified energy infrastructureAmid the growth of DERs, energy transactions are becoming more frequent,
+smaller in value, increasingly time-sensitive, and bidirectional. Where consump-
+tion used to be largely passive and predictable, consumers in some regions
+now actively participate in flexible demand programs or generate surplus power
+with rooftop solar. Traditional grid setups are not yet fully prepared for this
+shift, reinforcing the need for modern, interoperable systems.i. Static, mega, uni-directionalii. Dynamic, micro, bi-directional
+1.3
+There is a trend towards higher volume,
+more micro-value, dynamic and bi-directional
+transactions in the energy market, underscoring
+the need to modernise the gridFigure 2. Micro, bidirectional transactions are redefining
+the future of inclusive, high-volume energy exchanges.
+19Digital Energy GridA vision for a unified energy infrastructureMounting pressure on today’s grids manifest in several ways –
+Power outages
+Negative energy prices and curtailment
+Grid congestion
+Regions from Latin America to South Asia, Europe, and North America have
+experienced severe blackouts of increasing frequency and duration, revealing
+vulnerabilities in adapting to extreme weather and crises. Unreliable forecast-
+ing and inflexible response can drive unexpected price spikes and widespread
+disruptions. These outages cost around $100 billion each year—about 0.1% of
+global GDP21
+.
+Simultaneously, the rise of renewables has introduced a new challenge: neg-
+ative energy prices. In 2024, the share of negative priced hours in Southern
+California exceeded 20% marking a more than threefold increase compared
+to the previous year 22 . This issue is compounded when renewable producers
+are compensated to curtail output – a stopgap that is financially and envi-
+ronmentally inefficient compared to encouraging flexible-demand response
+and storage solutions.
+Delays in connecting new renewable projects and updating grid infrastructure
+are emerging as critical barriers. In Germany, congestion management costs
+exceeded EUR 4 billion in 2022—funds that are equivalent to investing in about
+4.5 gigawatts (GW) of new solar PV capacity. In the United States, transmission
+grid congestion costs ballooned from USD 6 billion in 2019 to nearly USD 21
+billion in 2022. Britain spent nearly GBP 1 billion just for balancing actions in
+winter 2021–2022 in response to transmission constraints 23
+. Such challenges,
+if left unresolved, could hamper both energy security and climate aspirations.
+Rising incidents and growing financial impacts underline the need for more
+flexible supply and demand capabilities. However, a mix of technical, economic,
+and informational constraints often blocks new market designs and frameworks
+that might offer solutions.
+1.4
+Infrastructure strain - Blackouts, negative pricing,
+and interconnection bottlenecks
+20Digital Energy GridA vision for a unified energy infrastructureAs demand variability increases and both DERs and variable renewables multiply,
+more integrated coordination is key to maintaining grid stability. Electrification—
+driven by heat pumps, air conditioners, electric vehicles—shapes new load
+curves and makes them more susceptible to short-term or seasonal disruptions,
+especially during heatwaves.
+Despite significant progress, the pace of transformation falls
+short of meeting global climate goals—like the international
+objective to triple renewables by 2030.
+1.5
+Shifting to a decentralized, low-carbon system is
+monumental and needs widespread coordination
+across technology, policy and markets
+0h 0h
+200
+400
+600
+800
+European Union
+GW
+India
+Other
+Transport
+Space cooling
+Heating
+Other buildings
+Industry
+2023 demand
+2050 demand
+2050 flexible demand
+24h 24hFigure 3. Daily average electricity demand
+by end use in European Union and India in the
+Stated Policies Scenario, 2023 and 205025
+.
+Notes. GW is gigawatts, h is hour. Heating
+covers space and water heating; other
+buildings includes lighting and cooking;
+other includes agriculture.IEA. CC BY 4.0.
+Global renewable capacity is expected to grow by 2.7 times by 2030,
+surpassing countries’ current ambitions by nearly 25%, but it still falls
+short of […] the goal of tripling renewable energy capacity worldwide
+established by nearly 200 countries at the COP28 climate summit.
+— IEA Renewables 2024 Report 24
+quote_open_roundel
+quote_open_roundel
+21Digital Energy GridA vision for a unified energy infrastructureAddressing these complexities requires greater system flexibility, both short-
+term and seasonal. Battery storage is becoming a crucial short-term dispatch-
+able resource for managing intermittency, and demand-side measures can
+help reshape load patterns, shifting peak demand to periods of abundant
+renewable generation. Yet these solutions rely on a supportive market design,
+broader grid upgrades, and digital frameworks that link supply, demand, and
+storage seamlessly.
+Digital technologies like smart meters and demand-response systems can
+reshape consumption, moving peak loads from evening hours to midday solar
+production. Nonetheless, it will take clear policies and pricing signals to make
+such solutions ubiquitous. A unified, cross-sector effort—integrating technical
+innovation, market-based mechanisms, and regulatory coordination—remains
+vital to building a resilient, secure system that also meets mounting energy
+and climate goals.
+1.6
+Augmenting grid infrastructure
+to handle digital complexity
+Decentralization, digitalization, and the growing dynamism of the energy system
+pose both a defining challenge and a major opportunity for the coming decades.
+Harnessing these changes will require new market designs and coordination
+across diverse assets, including batteries, flexible loads, and dispatchable
+generation. Digital tools and software-based systems can foster real-time
+orchestration of distributed resources, but only if stakeholders can share data
+easily and trust the platforms they use.
+A unified approach to policy, grid planning, and technological advancement
+can help us reach a sustainable energy system that supports rising demand
+while staying on track for climate and security goals. In the next chapter, we
+will see how structural barriers and a lack of coordination prevent us from fully
+leveraging these innovations—and why a foundational digital infrastructure may
+hold the key to overcoming them.
+22Digital Energy GridA vision for a unified energy infrastructure02
+Structural barriers, amplified
+by coordination gaps, are
+impeding the way forward
+23Digital Energy GridA vision for a unified energy infrastructureThe ongoing global energy transition is characterized by massive shifts toward
+electrification, decentralization, and digitalization. While these advances prom-
+ise cleaner, more resilient, and more equitable energy systems, they also bring
+fresh challenges. Power grids are no longer linear, top-down structures that simply
+deliver electricity from a few central generators to passive consumers. Instead,
+they are evolving into complex, interactive networks composed of large-scale
+renewables, distributed energy resources (DERs), smart appliances, and numer-
+ous new participants capable of generating, storing, or trading electricity.
+To fully unlock the potential of this transition, it is essential to understand the
+structural barriers that hinder progress, recognize the resulting coordination
+challenges, and explore new ways to overcome these obstacles through inno-
+vative thinking.
+2.1
+Structural barriers in
+the ecosystem today
+Current solutions are purpose-specific
+Current solutions occur in silos (non-interoperable)
+Non-digital modes of operation
+Many of the existing solutions address only a narrow aspect of the energy
+ecosystem. For example, there are platforms dedicated solely to EV charging
+or tools designed exclusively for DER management. Although these solutions
+can be effective within their limited scope, they do not provide a comprehen-
+sive framework that supports the full range of energy needs. This narrow focus
+means that promising innovations may only solve a single piece of the puzzle
+without contributing to an integrated system.
+Often, systems and technologies operate independently without sharing data
+or communicating with one another. This siloed approach leaves vital information
+isolated. For instance, data captured by one system may not be compatible with
+that from another, resulting in a fragmented landscape where opportunities for
+synergy are missed. Without interoperability, the full benefits of digitalization
+remain out of reach, and efforts to integrate new solutions are stymied.
+A significant portion of current processes still relies on manual or paper-based
+methods. These non-digital approaches lead to higher transaction costs, con-
+24Digital Energy GridA vision for a unified energy infrastructuretribute to information asymmetry, and reduce trust among stakeholders. When
+contracts and performance metrics must be verified through physical inspec-
+tions rather than automated digital records, the process becomes both
+time-consuming and prone to error. Such legacy practices further complicate
+the scaling of innovative digital solutions.
+These barriers give rise to three interrelated coordination challenges –
+The absence of unified digital records means that data is often fragmented
+and inconsistent. Even in advanced economies with millions of smart meters,
+critical information—such as the timing and volume of energy production, con-
+sumption, and trade—remains scattered across disparate systems. This infor-
+mation asymmetry hampers real-time decision-making by grid operators,
+regulators, and market participants, sometimes leading to inaccurate load
+forecasts and delayed dispatch of energy.
+The reliance on manual processes and redundant documentation increases
+transaction costs. Without standardized digital records, establishing trust
+becomes challenging—especially when traditional verification methods (such
+as repeated physical inspections or manual audits) are too slow or resource-in-
+tensive. This low trust hinders market participation and delays the onboarding
+of new players.
+Energy transactions are burdened by high costs, unstandardised processes, and
+limited access to low cost, dynamic, and rapid contracting mechanisms between
+transacting parties. Participants, such as battery owners or demand-response
+providers, often lack the infrastructure to independently initiate trustworthy
+contracts or build reputational scores. Costly digital linkages and intensive con-
+tract management further increase transaction costs, restricting the ability of
+individuals and small-scale energy providers to participate in energy markets
+without local aggregators. The absence of cohesive frameworks limits the market
+potential of DERs. For instance, only 25% of solar installations in the U.S. include
+a battery, despite the increasing availability of these technologies26
+.
+Managing information flows
+Managing transaction flows
+2.2
+Implications of these
+structural barriers
+25Digital Energy GridA vision for a unified energy infrastructureWithout an integrated digital system to coordinate the physical movement
+of energy, inefficiencies and imbalances arise. These issues can lead to reduced
+grid stability and diminish confidence in the system’s ability to handle variable
+renewable inputs and distributed resources effectively. Even well-designed
+demand-response programs may fall short if energy flows remain poorly
+coordinated.
+Addressing these structural barriers calls for an approach that sees beyond
+individual projects or quick-fix policies. The concept of infrastructure-thinking
+with a unified approach, grounded in shared and scalable digital infrastructure,
+enables the energy system to move beyond piecemeal efforts and tackle the
+underlying lack of coordination. It is not about pushing a singular technology
+or enforcing a one-size-fits-all solution. Instead, it involves ensuring that minimal,
+open standards and protocols allow diverse actors to interconnect, share
+trustworthy data, and transact with reduced friction. Historical examples, such
+as the standardization of telephone networks, the open protocols of the internet,
+and uniform electrical systems, demonstrate how unification can revolutionize
+entire sectors.
+Drawing parallels from past successes, the energy sector could adopt shared
+digital “rails” that facilitate interoperability among devices, networks, and admin-
+istrative systems. This is seen via multiple past innovations like Pix in Brazil and
+UPI in India (see annexure). This approach creates a dynamic, scalable ecosys-
+tem in which new standards, tools, and security methods can be incorporated
+without fracturing legacy systems. It establishes a cohesive digital layer that
+invites every participant—from an off-grid micro-hydro unit to a cutting-edge
+AI-driven aggregator—to interconnect at the minimal required level and speak
+a common digital language. Through “programmable contracts,” for instance,
+rules can be executed automatically once predefined conditions are met. For
+example, paying a homeowner when their rooftop solar sends surplus power to
+a neighbor’s battery. These mechanisms unlock new business models, from
+peer-to-peer energy markets to aggregated demand-response programs, where
+each participant has confidence in the integrity of the data, processes, and
+settlements involved.
+Historically, technological innovation has scaled through unification and infra-
+structure thinking, with purpose-specific advancements converging into broader,
+purpose-generic solutions. Minimal, standardized “packetization” of design and
+processes through open specifications has fueled rapid growth across indus-
+tries—a pattern that could similarly drive efficiency, resilience, and sustainabil-
+ity in the energy sector.
+Managing energy flows
+2.3
+Overcoming these barriers
+through infrastructure thinking
+26Digital Energy GridA vision for a unified energy infrastructurePurpose-specific
+innovations
+Unifying, purpose-generic
+technology’
+Camera
+Music player
+GPS
+Smartphone
+Technological evolution has followed a consistent
+pattern of purpose-specific innovations converging
+to a purpose-generic solution
+Minimal and generalized “packetization” of design and
+processes through open specifications has fueled rapid
+growth and scalability across industries
+Smartphones
+Unified functionalities of distinct
+devices (music players, GPS, cameras)
+into versatile tools for communication,
+photo editing, home automation, and
+more.
+Cloud computing
+Evolved from remote date storage
+to a unified system enabling data
+processing, machine learning and
+scalable innovation.
+Purpose generic solutions enable
+seamless integration of capabilities,
+fostering creativity and efficiency in
+interconnected systems.
+TCP/IP Protocol
+Data packetization based on
+specifications allows diverse
+devices to exchange information
+seamlessly, commoditizing hardware
+and enabling applications like email,
+streaming & AI bots.
+Logistics Standardization
+Shipping containers revolutionized
+goods movement across transport
+modes, optimizing operations,
+enabling inventory management
+tools, and driving scalability.
+Energy Sector Applications
+Standardized delivery voltage,
+frequency, and lithium-ion battery
+cell formats foster interoperability,
+product innovation, and large-scale
+adoption across industries.
+Open Specifications
+Process Layer
+Infrastructure and
+Connectivity
+HTTP FTP TCP UDP SCTP
+PPP Ethernet Wi-fi
+Port operations
+Truckings
+Customs clearance
+Transport modes
+Trucks, trains, planes
+Handling equipments
+Cranes, forklifts
+Operational
+Applications
+Physical
+Foundation
+Email Web
+browsers Open AI Streaming
+services
+Supply chain
+softwares
+Shipping
+businesses
+Financial
+products
+Container
+Specifications
+Internet
+Protocol
+Enabling
+innovation
+Enabling
+innovation
+Ports Container
+manufacturing WarehousesCopper cables Fiber optics Radio frequenciesFigure 4. Trends of technologies that embraced unification
+and infrastructure thinking
+27Digital Energy GridA vision for a unified energy infrastructureWith a unified energy environment in place, the energy ecosystem can trans-
+form from a patchwork of purpose-specific, siloed solutions into an integrated
+network that supports robust cross-sector collaboration and innovation. This
+transformation can reduce friction, enhance trust, and ultimately help the sector
+meet accelerating demand, manage variable renewable inputs, and overcome
+unpredictable challenges.
+In short, the energy sector already has numerous promising pilots, frameworks,
+and technologies. What it lacks is a unifying structure to weave these efforts
+into a resilient, scalable fabric capable of meeting accelerating demand, vari-
+able renewables, and unpredictable shocks. The next chapter outlines how an
+infrastructure-led approach—embodied by the concept of the Digital Energy
+Grid—can shift us out of siloed thinking and into coordinated action, setting
+the stage for a new era of reliable, dynamic, and inclusive energy systems.
+2.4
+Toward an infrastructure that
+unlocks the next phase of the
+energy transition and security
+Digital Energy Grid (DEG)
+could augment the existing
+energy grid and embody
+infrastructure-thinking
+03
+29Digital Energy GridA vision for a unified energy infrastructureThe energy system grows more complex each day. Siloed fixes—ranging from
+specialized software platforms to targeted policy incentives—do help in par-
+ticular niches, but they frequently lack the broader coordination required to
+address a system where everything from rooftop solar generation to demand-re-
+sponse programs must align. This is a problem because the next phase of the
+energy transition depends on integrating a growing number of technologies
+and participants into a unified whole. A grid that only partially sees behind-
+the-meter resources or that requires manual verification of countless small
+transactions is unlikely to keep pace with the demands of higher renewable
+penetration and more electrified end uses.
+Infrastructure-thinking has guided the evolution of railways, telecommunica-
+tions, the Internet, and digital financial services by establishing minimal yet
+robust common layers. These layers made entire ecosystems flourish. In the
+energy realm, the creation of a shared “digital architecture”—one that binds
+physical infrastructure with real-time data, economic transactions, and regu-
+latory oversight—may present an equally transformative opportunity. Such an
+architecture can help the grid handle new inflection points by systematically
+knitting together the various participants, resources, and solutions under an
+overarching, interoperable framework.
+This paper introduces the Digital Energy Grid (DEG) as a conceptual blueprint
+for building a unified energy ecosystem. The guiding principle is to interlink the
+physical grid—comprising generation, distribution, loads and storage assets—
+with a digital “data grid” that encompasses everything from pricing signals to
+device identities and transaction histories. With that arrangement, we can shift
+from a traditional top-down network to a more adaptable, network-of-networks
+model, where each node (be it a microgrid, an aggregator’s platform, or a pro-
+sumer’s smart home) remains autonomous yet still interoperable with the rest.
+By weaving together real-time data streams, operational signals, and secure
+exchange mechanisms, DEG sets the stage for a resilient, transparent, and
+innovation-friendly infrastructure. It raises the “playground” for diverse partic-
+ipants—utilities, regulators, communities, startups, large industries—fostering
+a more cohesive approach to shared goals like decarbonization, reliability, &
+affordability.
+3.1
+A vision for a
+unified energy future
+30Digital Energy GridA vision for a unified energy infrastructureUniversal and interoperable identity
+for all energy assets and actors
+The first cornerstone is establishing digital identities for each entity, actor and
+asset—ranging from power plants, transmission grids, and commercial battery
+farms to smaller devices like rooftop panels, electric vehicle (EV) batteries, or
+building automation systems. These identities act as globally unique references,
+akin to phone numbers or IP addresses in telecommunications.
+i.
+The Digital Energy Grid (DEG) centers on three interrelated elements that, when
+combined, enable seamless interoperability, scalability, and reliability.
+Machine-readable data formats
+Beyond simple tagging, DEG insists that metadata—about devices, energy
+transactions, certifications, or consumption profiles—be expressed in a way
+that can be systematically processed by software. Instead of static documents
+or PDFs, the focus shifts toward open, machine-readable templates.
+ii.
+3.2
+Key building blocks of
+the Digital Energy Grid
+Country codes for telephone numbers and zip codes
+Each country may have its own standards for telephone numbers and zip
+codes, often leading to duplicates or non-interoperable formats across
+borders. However, the introduction of standardized prefixes, such as country
+codes for phone numbers (e.g., +91 for India), ensures unique identification
+and seamless global communication. Similarly, zip codes, while locally
+defined, rely on hierarchical structures that allow for clear and consistent
+mapping within broader postal systems. These simple yet effective
+standardizations demonstrate how unique identifiers can bridge regional
+inconsistencies, enabling global addressability and interoperability.
+31Digital Energy GridA vision for a unified energy infrastructureBy layering digital identity, data interoperability, and trust mechanisms over the
+existing physical grid, DEG transforms today’s somewhat siloed landscape into
+a more interconnected “network of networks.” In practical terms, it means that:
+• Transmission and Distribution Operators can have real-time, programmable
+access to each distributed asset (be it an electric vehicle [EV] or a rooftop
+photovoltaic [PV] array), enabling more intelligent load dispatch and grid-
+balancing decisions.
+Verifiability and portability of data
+The final pillar is embedding robust verification procedures, which ensure that
+data—once registered or recorded—is cryptographically tamper-evident and
+remains portable across the ecosystem. This includes cryptographic signatures,
+proof-of-origin records, and permissioning models that uphold data sovereignty.
+Together, these three building blocks—universal identity, machine-readable
+structures, and verifiability—represent the minimal infrastructure necessary
+to align physical energy flows with the information and transactional layers of
+a modern, distributed system.
+iii.
+3.3
+From grids to networks:
+an interconnected energy world
+Digital and machine-readable data streams
+Imagine a world where every appliance’s specifications, certifications, and
+ratings are digitally accessible in a standardized format. Combined with
+machine-readable consumption and transaction data, this creates the
+foundation for highly automated, analytics-driven, and intelligent decision-
+making systems. For instance, just as machine-readable invoices underpin
+the efficiency of modern tax systems by enabling seamless tracking and
+compliance, such digital streams in the energy ecosystem could unlock
+appliance-level metering, dynamic energy management, and precise control.
+This level of granularity and automation could optimize energy usage,
+enhance grid stability, and drive smarter energy policies.
+32Digital Energy GridA vision for a unified energy infrastructure• Energy Producers can automate everything from certifications (like proof of
+renewable generation) to contract settlements, while verifying their perfor-
+mance with cryptographic signatures.
+• Consumers gain new freedoms, such as frictionless switching to different
+suppliers or direct peer-to-peer transactions. Households might securely
+lease out unused battery capacity or easily join local microgrids for resiliency.
+• Regulators and policymakers can embed oversight directly into the infrastruc-
+ture, ensuring that safety, data privacy, and consumer protections scale with
+the network. They also gain clearer visibility into real-time grid conditions,
+improving policy effectiveness.Figure 5. The DEG vision encompasses all facets of the ecosystem.
+G
+O
+V
+E
+R
+N
+A
+N
+C
+E
+INTERSECTIO
+N
+S
+W
+I
+T
+H
+T
+H
+E
+R
+E
+S
+T
+O
+F
+T
+H
+E
+E
+C
+O
+N
+O
+M
+Y
+C
+O
+M
+M
+O
+N
+D
+I
+G
+I
+T
+A
+L
+I
+N
+F
+R
+A
+S
+T
+R
+U
+C
+T
+U
+R
+E D EG
+Small-scale
+batteries
+VPP
+Prosumer
+Business
+Electric
+vehicles
+Rooftop
+solar
+Households Transmission
+operators
+Power
+generators
+Utilities
+Distribution
+operators
+33Digital Energy GridA vision for a unified energy infrastructureDigital solutions, open standards, and advanced technologies like OCPP, OCPI,
+IEC 61850, and initiatives such as Project Mercury27 are already enabling tar-
+geted interoperability and communication for EV charging, DER management,
+and clean technology integration. Building on this progress, these efforts have
+successfully addressed specific needs, yet there remains an opportunity to
+unlock even greater potential through universal composability across the energy
+grid. A general-purpose foundation can amplify their impact significantly.
+The Digital Energy Grid (DEG) can coordinate, complement, and unify existing
+solutions-without displacing them. By enabling true interoperability across
+systems, DEG provides the broader architecture on which these purpose-spe-
+cific standards can be layered and expanded.
+3.4
+Bridging silos to capture
+combinatorial value
+Have we seen this before?
+HTML
+MP3 GIFPNG
+MP4 SVGJPEGFigure 6. General purpose standard accommodates
+and amplifies purpose-specific efforts.
+A universal base layer can integrate and unify various purpose-specific standards,
+enabling seamless interactions & creating combinatorial value.
+For example, JPEG, GIF, SVG, MP4, & MP3 are purpose-specific standards, each
+designed for a distinct data format- JPEG for still pictures, GIF for animations,
+MP3 for audio, and MP4 for video. While each excels in its function, they cannot
+inherently interact with one another. This is where a unifying base layer, like HTML
+and HTTP, comes in. HTML allows different types of content – images, videos,
+text, and audio – to coexist and function together within a single webpage, while
+HTTP facilitates the smooth transfer of this multi-modal data across networks.
+34Digital Energy GridA vision for a unified energy infrastructureIf purpose-specific standards are like individual Lego blocks of different shapes
+and sizes, the unifying base layer is the set of connectors and the instruction
+guide that allows these blocks to fit together in meaningful ways. HTML and HTTP
+act as the underlying fabric within which diverse elements can interoperate,
+empowering innovators to create rich, interactive, and multi-modal experiences
+that seamlessly combine different formats into something greater than the sum
+of their parts.
+Instead of creating competing standards that replace existing frameworks, a
+well-architected base layer enables existing standards to work together cohesively.
+This composability- the ability to combine different components into larger,
+functional systems- ensures long-term adaptability. The base layer remains future-
+proof, allowing new purpose-specific standards to be integrated without requiring
+a complete overhaul of existing systems.
+It’s important to note that DEG is not a fixed piece of software or a proprietary
+technology stack. Instead, it is a vision for an evolving, interoperable, and modular
+set of digital rails spanning the entire energy sector. Over time, the ecosystem
+can accommodate new standards, tools, and security methods without fracturing.
+Legacy systems can gradually integrate, while advanced players adopt next-
+generation functionalities for even deeper automation or cross-sector linkages.
+Here, we see infrastructure-thinking in action: the objective is not to enforce
+uniformity by discarding existing systems, but to extend an invitation for each
+actor to interconnect at the minimal required level. Just as the internet did not
+demand that all computers be made by the same manufacturer, DEG does not
+demand a universal software or hardware solution. Instead, it sets the stage so
+that all participants—from an off-grid micro-hydro unit to a cutting-edge AI-driven
+aggregator—can speak a shared digital language and produce verifiable records.
+The next chapters examine how DEG can unlock new possibilities across different
+parts of the energy ecosystem and how this vision, though ambitious, can be
+realized through incremental actions and collaborative governance. By focusing
+on the foundational digital building blocks today, we can ensure that energy systems
+worldwide can adapt, innovate, and collaborate on a scale never before seen—
+meeting both current demands and the pressing need for a sustainable future.
+3.5
+DEG as an evolutionary vision,
+not a single product
+35Digital Energy GridA vision for a unified energy infrastructure04
+Unlocking new
+possibilities with DEG
+36Digital Energy GridA vision for a unified energy infrastructureA system founded on universal identity, machine-readable data, verifiability,
+and portability does more than simply organize information; it also enables
+transaction logic that can be automated, combined, and adapted. When energy
+assets and participants are all “on the grid” in a digital sense, functions like
+peer-to-peer trading, dynamic pricing, and transparent certification can emerge
+without sacrificing the oversight that regulators, auditors, and financial institu-
+tions require. By weaving these capabilities into a common infrastructure, the
+Digital Energy Grid (DEG) sets the stage for more interconnected and imagi-
+native solutions across the energy ecosystem.
+Behind-the-Meter Insights
+Granular tracking of energy
+use and generation
+Accurate Forecasting
+Precise preditictions of demand
+and supply
+Grid Flexibility
+Dynamic management of energy flows
+Automated Responses
+Real-time adjustments to disruptions
+Seamless Integration
+Efficient coordination of distributed
+resources
+Dynamic Pricing
+Real-time cost adjustments
+reflecting market conditions
+Peer-to-Peer Trading
+Decentralized energy exchange
+Inclusive Access
+Broader participation in energy markets
+AI-Driven Insights
+Intelligent energy optimization
+System Resilience
+Proactive risk management
+Innovation Catalyst
+Unified foundation for
+new solutions
+Intelligent Coordination & Control
+Enhanced Visibility & Forecasting Smarter Decision-Making
+Market Efficiency & AccessibilityFigure 7. DEG combines transparency, innovation, and dynamic market solutions.
+4.1
+Illustrating the value:
+Different stakeholders, different needs
+DEG offers wide-ranging gains for individuals, businesses, governments, and
+the energy sector at large. The table below highlights how various stakeholders
+in the energy ecosystem might experience the transformation once they inte-
+grate with a coherent digital network built on the principles of universal iden-
+tity, machine-readable data, and verifiable records.
+37Digital Energy GridA vision for a unified energy infrastructureConsumer/Prosumer
+Residential: Individual,
+household, apartment,
+gated community, coopera-
+tive housing society
+Commercial: Corporation,
+government agency, SMEs,
+industry, factory, township,
+nonprofit
+Energy Cooperatives: Local
+collectives managing shared
+energy resources
+• Reliable and
+affordable energy
+• Transparency in billing
+and usage data
+• Path to self-generate or
+store power
+• Incentives for efficiency or
+renewable investments
+• Control over personal data
+• Enhanced energy security
+and resilience
+• Reduced carbon
+footprint and verified
+access to renewables
+• Immediate ways to buy surplus
+energy or sell rooftop solar output at
+peak prices, with automated billing
+and real-time price signals
+• One-stop discovery of applicable
+subsidies or financing programs,
+digitally verified for quicker approvals
+• Secure, user-managed data sharing
+with banks or insurers to prove
+capacity, consumption, or
+production—speeding up loan
+or claim processing
+• Fractional ownership28 in community
+renewables, tracked on a shared
+dashboard with digitally enforced
+rights and transparent payouts
+Utility Company /
+Grid Operator
+National or regional
+operator, electricity
+retailer, microgrid or
+battery operator
+• Real-time visibility into
+supply and load
+• Ways to balance the
+system and ensure
+reliability.
+• Reduced congestion and
+transmission losses.
+• Integration of renewables
+and DERs without desta-
+bilizing the grid.
+• Streamlined processes for
+maintenance and invest-
+ment planning.
+• A unified, real-time view of all
+distributed assets—simplifying peak
+load management and accelerating
+dispatch decisions
+• Automated onboarding for new
+producers or EV fleets, with
+pre-verified digital credentials
+that cut overhead and reduce errors
+• Fine-grained forecasting that
+combines consumer patterns,
+weather data, and aggregator signals
+for precise short- and long-term
+load balancing
+• Streamlined maintenance and asset
+planning, thanks to verifiable opera-
+tional logs shared across multiple
+stakeholders
+As a... What am I looking for... What will I get through DEG...
+Energy Producer
+Central power plant,
+renewable IPP, VPP
+operator, aggregator
+• Maximized revenue from
+energy production
+• Quicker grid
+interconnections
+• Access to dynamic markets
+and carbon credits
+• Forecastability and stream-
+lined operations
+• Faster regulatory approvals for
+new projects, via machine-readable
+credentials recognized by local
+authorities and financiers.
+• Decreased curtailment, since opera-
+tors can match supply with flexible
+loads in near real time—improving ROI
+on generation assets.
+• Transparent performance data that
+proves renewable credentials for
+Energy Market Operator
+Regulator
+Independent system
+operator, transmission
+system operator, or
+electricity exchange
+State or national energy
+agency, local authority,
+energy policy institution
+• Efficient, transparent
+trading mechanisms’
+• Management of supply
+and demand volatility
+• Broader participation in
+energy markets
+• Low transaction costs and
+faster settlement
+• Growth in advanced
+dynamic pricing and
+demand-response models
+• Universal energy access
+• Meeting national and
+international climate targets
+• Safeguarding safety,
+resilience, and affordability
+• Fair and transparent
+markets
+• Consumer protection
+and privacy
+• Incentivizing innovation
+• Real-time bids from thousands
+(or even millions) of small producers
+and prosumers—creating liquid, highly
+competitive markets
+• Automated credential checks so
+new DER participants can join quickly,
+while ensuring full compliance with
+market rules
+• Dynamic tools to reduce curtailment
+by pairing surplus power with
+flexible demand, supported by
+verifiable transactions
+• Accurate pricing of ancillary
+services, capturing micro-level
+flexibility from consumer devices
+and distributed storage
+• Richer, real-time data on how
+resources are used and where they’re
+lacking—supporting evidence-based
+policies and targeted subsidies
+• Faster, more cost-effective enforce-
+ment of consumer protections or grid
+codes through automated compli-
+ance checks and alerts
+• Automatic tracking of emissions,
+renewable energy credits, or carbon
+offsets—streamlining climate report-
+ing and policy updates
+• Digitally encoded tariffs, safety
+standards, and incentives that imme-
+diately propagate to all energy
+participants, cutting red tape
+• Ability to demonstrate
+compliance and perfor-
+mance data.
+• carbon-offset trading or compliance,
+instantly recognized by global markets
+• Prompt settlement for energy deliv-
+ered, triggered by verified production
+logs automatically shared with buyers
+and regulators
+Financing agency
+Development bank,
+commercial lender,
+• Transparent risk-return
+profiles for energy
+projects
+• Tamper-proof performance logs
+and asset credentials, ensuring faster,
+lower-risk due diligence on energy
+projects
+As a... What am I looking for... What will I get through DEG...
+39Digital Energy GridA vision for a unified energy infrastructureMarket Players
+Charge point operators,
+battery manufacturers,
+appliance makers, AI
+solutions providers, data
+center operators, industrial
+economic zone oeprators
+• Expansion of new offerings
+and revenue streams
+• Efficient integration
+with grid operations for
+affordable and sustainable
+energy sources
+• Compatibility with
+emerging standards
+and systems
+• Access to funding for R&D
+• Easier multi-utility integration, thanks
+to universal data formats and digital
+asset IDs—reducing cross-platform
+overhead
+• A bigger, more uniform customer
+base, with fewer barriers to launching
+new services (e.g., EaaS) across
+multiple jurisdictions
+• Seamless collaboration with grid
+operators, as new hardware or soft-
+ware can be digitally verified for
+compliance automatically
+• Lower transaction costs and quicker
+product rollouts, enabling more
+specialized, high-value offerings
+that complement existing platforms
+City Administrators
+Municipal authorities,
+urban planning,
+transportation boards
+• Reduced carbon
+footprint and improved
+public services
+• Reliable local power
+generation and
+distribution
+• Economic growth through
+local energy initiatives
+• Tools for tracking progress
+toward sustainability goals
+• Accelerate smart city’s net zero plan
+that coordinates street lighting, electri-
+fication of vehicles, and community
+solar under one digital umbrella—all
+tracked in real time
+• Targeted incentives for local energy
+initiatives, creating green jobs (e.g.,
+system installers, energy auditors)
+and shared ownership of energy assets
+• Granular data on power usage and
+emissions for each neighborhood—
+enabling more efficient urban planning
+and faster emergency response
+• Automated policy and rule enforce-
+ment, with digital dashboards showing
+progress toward local sustainability
+or resilience goals
+insurance company,
+microfinance institution
+• Verification of asset
+performance and viability
+• Trustworthy channels for
+small-scale projects (e.g.,
+microgrids, local solar)
+• ESG alignment and sustain-
+able finance
+• Simple onboarding of micro-energy
+investment categories (community
+solar, aggregated storage) with
+transparent operational data
+• Real-time event triggers (e.g., battery
+downtime) that automatically release
+insurance payouts or loan tranches
+upon verified conditions
+• Enhanced credit evaluations and
+ESG scoring, by analyzing consistent
+data on project viability and
+asset utilization
+As a... What am I looking for... What will I get through DEG...
+40Digital Energy GridA vision for a unified energy infrastructureGovernment
+National government,
+diplomatic entity
+• Affordable, stable energy
+supply for citizens
+• Achievement of climate
+commitments
+• Reduced dependence on
+imported fuels
+• Scalable, modern grids
+• Encouragement of private
+sector participation
+• Streamlined interactions between
+federal agencies, utilities, and
+local entities—accelerating major
+infrastructure projects with
+consistent data
+• Real-time metrics on policy effec-
+tiveness, enabling flexible adjust-
+ments to electrification or
+decarbonization
+targets without bureaucratic delays
+• Attractiveness for foreign and
+domestic investment, since open,
+verifiable data and universal identi-
+ties reduce risk and boost investor
+confidence
+• Scalable, modern grid policies that
+adapt to diverse regions and resource
+types, ensuring stable, cli-
+mate-aligned energy for citizensTable 1. Stakeholders can adopt different facets of the DEG Vision.
+4.2
+A foundation for
+synergistic growth
+Each type of stakeholder—consumer, producer, operator, regulator, financing
+agency—can adopt DEG at a different scale, reflecting local conditions or imme-
+diate priorities. Yet as they link into the same underlying network, their combined
+actions create a synergistic whole that is more robust, transparent, and ready
+to evolve over time. Large utilities may be the first to standardize identities for
+their generating units; local communities might join soon after, using the same
+protocols to unlock real-time data on rooftop solar. Little by little, segments of
+the energy ecosystem that used to operate in isolation merge into a more
+unified environment.
+At a macro level, this transformation carries meaningful implications for clean
+energy adoption, grid stability, and the everyday experience of energy users.
+Overcoming the longstanding fragmentation in how data is managed, trust is
+established, and transactions are settled could deliver compounding benefits—a
+better match of supply and demand, deeper cost savings, and less friction in
+scaling up new infrastructure.
+As a... What am I looking for... What will I get through DEG...
+41Digital Energy GridA vision for a unified energy infrastructureDEG weaves core functionalities, such as observability and secure transactions,
+directly into the infrastructure. With universal identity, machine-readable
+formats, and cryptographic assurance, the physical flow of electrons can be
+coordinated with seamless, digital interactions. A flexible marketplace emerges,
+fostering collaboration and innovation at scale while preserving reliable
+oversight and guaranteed fairness for all. In place of patchwork pilots or
+proprietary “smart grid” experiments, the industry gains a versatile digital
+framework that encourages both public and private stakeholders to expand,
+refine, and recombine capabilities.
+This approach sets the stage for the next chapters, which illustrate the breadth
+of possibilities DEG can unlock, from frictionless subsidy distribution to advanced
+peer-to-peer trading and cloud battery services. By creating a single environment
+where devices, participants, and transactions can interoperate, DEG aims to
+reduce wasted effort, open new revenue opportunities, and realize an energy
+transition that lives up to its transformative promises.
+4.3
+Core functionalities for
+transformative scale
+05
+The DEG vision embodies
+scale, diversity, openness,
+and resilience for inclusive
+energy systems
+43Digital Energy GridA vision for a unified energy infrastructureThe Digital Energy Grid (DEG) serves as more than a conceptual framework: it
+offers a vision of an inclusive, global energy ecosystem, one that brings together
+various technologies, participants, and use cases. Realizing this vision depends
+on weaving essential design principles into every level of the grid. These prin-
+ciples—openness, trust, resilience, public-private synergy, and flexibility—are
+not abstract ideals but rather practical necessities that shape how DEG is
+structured, governed, and adopted across different contexts.
+While DEG is a powerful example of infrastructure thinking, it is only one of
+several possible approaches to guide the energy transition. Our focus here is
+on how infrastructure-led methods can make the system more robust and
+adaptable, without prescribing a particular approach.
+A key ambition for DEG is to function as a “network of networks,” unifying dis-
+tributed energy resources (DERs), IoT-based devices, and energy infrastructures
+spanning localities and national borders. This allows seamless interaction among
+diverse systems, regardless of origin or design. For example, a city’s community
+battery system can coordinate with a regional grid operator or an industrial
+microgrid can share data with local regulators, all via the same coherent network.
+5.1 Creating a seamless
+network of networks
+Creating a
+seamless network
+of networks
+Embedding
+trust, security, and
+resilience at the core
+Fostering
+public-private
+synergies for scale
+and innovation
+Ensuring
+flexibility for diverse
+energy futures
+Principles of DEG
+Interoperability as a core principle
+Interoperability goes beyond simply enabling communication; it ensures that
+each subsystem—whether an EV charging network, a micro-hydro plant, or a
+rooftop solar aggregator—uses minimal, open, shared digital standards. This
+cuts the cost of “translating” data and simplifies how new entrants tap into
+markets or compliance structures.
+44Digital Energy GridA vision for a unified energy infrastructureModular design allows anyone to build on the network
+By unbundling problems and solutions into core, reusable building blocks with
+open protocols and specifications, we can ensure that these components are
+highly trusted and cost-effective for reuse by public and private entities. This
+approach allows the ecosystem to combine these modular building blocks,
+much like Lego pieces, to create tailored solutions that fit various needs.
+By adopting a minimalist approach, the architecture is designed to excel at a
+single function without imposing on or disrupting the rest of the workflow.
+Minimizing unnecessary fragmentation
+Instead of letting each entity build closed, proprietary systems, a widely shared
+“digital backbone” reduces fragmentation at scale. It eliminates the repetition
+of efforts —including identification, verification, and other forms of data rec-
+onciliation—thereby enabling seamless interactions across the system, break-
+ing siloes, and unlocking combinatorial benefits.
+Design for evolution and adaptation
+Technological progress can take place quickly, and rigid platforms risk becom-
+ing obsolete. DEG’s open standards and protocols are designed for modular
+upgrade paths, allowing new solutions to plug in or swap out without breaking
+existing connections. This future-readiness lets participants upgrade hardware
+or adopt new software without disrupting the entire system, thus preserving
+backward compatibility and reducing disruption.
+As millions of DERs join the energy grid, the challenges of ensuring reliability
+and security multiply. Cyber threats, large-scale privacy breaches, or malicious
+activities can threaten confidence in the ecosystem. In a decentralized envi-
+ronment, the stakes become even higher—one vulnerability in a microgrid or
+connected appliance could cascade across the system. DEG has been designed
+keeping these stakes in mind.
+5.2 Embedding trust, security,
+and resilience at the core
+Verification and cryptographic integrity
+Verifiable data, identity systems, and cryptographic proofs are woven into the
+design to guarantee that no node can falsify or tamper with asset metadata,
+transactions, or operational logs without being detected. This is vital for maintaining
+trust in transactions like peer-to-peer trading or flexible load contracts.
+45Digital Energy GridA vision for a unified energy infrastructureSecurity by default
+Rather than bolting on security after deployment, the DEG framework treats
+security and privacy as foundational requirements. For instance, standardized
+protocols can specify cryptographic signatures for every data packet, ensuring
+that private data is encrypted end-to-end and that only authorized parties
+can access, authenticate or alter it with consent.
+Resilience and redundancy
+A robust system is one that can bounce back from localized failures. DEG’s
+decentralized network architecture is designed to avoid single points of failure
+by enabling different players and solutions to plug in when needed, and to
+incorporate redundancy in data storage, node operation, and validation. This
+reduces the likelihood that a local outage or security event spirals into a major,
+system-wide disruption.
+Building a digital energy infrastructure that spans countries and continents requires
+broad collaboration among governments, regulators, utilities, technology devel-
+opers, and grassroots innovators. While public institutions lay down essential
+guardrails, private entities bring capital, expertise, and adaptability that can
+accelerate widespread adoption. Co-creation through pilot projects and shared
+frameworks can unite these strengths: for instance, a local aggregator might
+partner with a national utility to test real-time price signals or plug-and-play
+solar kits, with results feeding back into broader policy and market designs.
+This also opens doors for innovation across the system, by different kinds of
+participants to solve a diverse range of problems in the ecosystem. By lower-
+ing barriers for smaller players or specialized startups, synergy can extend
+solutions to underserved areas, ensuring that no segment of the energy com-
+munity is left behind. Over time, success stories from local experiments can
+inspire new entrants in other regions, creating a positive feedback loop that
+drives further improvement.
+The energy landscape varies from one context to another. Megacities may
+emphasize rapid EV adoption and large-scale renewables, while smaller towns
+might concentrate on community-level microgrids or shared solar. DEG vision
+acknowledges this diversity by enabling “modular” adoption of its core ele-
+ments, adjusted to local conditions and readiness levels.
+5.3 Fostering public-private
+synergies for scale and innovation
+5.4 Ensuring flexibility for
+diverse energy futures
+46Digital Energy GridA vision for a unified energy infrastructureModular, asynchronous approaches
+One region could begin by assigning unique digital identities to each rooftop
+solar installation, while another might prioritize data structures for EV charging
+stations or advanced grid automation. Each domain can adopt the portions of
+the DEG framework that address its immediate challenges without losing com-
+patibility with future expansions.
+Equitable access and inclusivity
+A universal framework means that the same open protocols and identity systems
+can be used by large utilities and small local energy cooperatives alike. This
+levels the playing field, so even resource-constrained communities can tap
+into modern grid functionalities—like demand response or dynamic tariffs—and
+benefit from a shared network.
+Adapting to emerging technologies
+Flexible design also ensures that DEG can incorporate new capabilities. Whether
+that’s hydrogen-based microgrids, AI agents scheduling load in real time, or
+advanced carbon-trading algorithms, the grid can keep evolving in ways that
+respect local differences while preserving overarching interoperability.
+By incorporating scale, diversity, openness, and resilience as core design pil-
+lars, the Digital Energy Grid aims to create an environment in which partici-
+pants—large or small—can thrive. Openness frees them to experiment, trust
+mechanisms help them transact and collaborate safely, and well-defined
+governance structures support further expansion and innovation. The outcome
+is not just a patchwork of discrete fixes, but a comprehensive ecosystem that
+helps societies everywhere pursue a secure, inclusive, and climate-aligned
+energy future.
+These same principles animate the examples explored in the next chapter,
+where today’s projects and tomorrow’s innovations illustrate how a unified grid
+can advance the transition from fragmented, siloed approaches to a flourish-
+ing, resilient energy network.
+47Digital Energy GridA vision for a unified energy infrastructure06
+Through coordination,
+DEG can enable a wide
+range of current and
+future possibilities
+48Digital Energy GridA vision for a unified energy infrastructureThe potential applications of a Digital Energy Grid (DEG) span far beyond those
+we can foresee today. A unified infrastructure for energy flows, information
+exchange, and secure transactions could lead to breakthrough innovations that
+resemble the chain reactions triggered by the emergence of the internet. Where
+connectivity and interoperability become the norm, unforeseen “flywheel effects”
+often follow—akin to how the web eventually paved the way for social media
+platforms, the gig economy, and generative AI.
+The examples in this chapter offer a glimpse into the wide variety of applications
+and the concrete value DEG can bring to both existing and nascent fields. These
+hypothetical scenarios are not exhaustive; rather, they illustrate what becomes
+possible when energy assets, participants, and transactions operate under
+common, interoperable standards.Note.
+All imaginations are hypothetical. Logos used are for illustrative purposes
+only. All names are ficticious, and any resemblance is coincidental.
+CO2
+Peer-to-peer
+energy trading
+Cloud-energy
+storage
+Carbon trading
+marketplace
+Demand
+flexibility
+Effective
+solarisation
+Imagining a world with DEGFigure 8.
+Imagining a world with DEG.
+49Digital Energy GridA vision for a unified energy infrastructureSubsidy
+Bank
+Solar
+vendor
+Mihir
+Net-metering
+systemFigure 9 . 1
+Illustrative diagram of solar subsidy distribution workflow in a non-DEG environment
+In a remote village in a country with large electricity use in agricultural pump-
+ing, the regional government is launching a solarisation initiative to accelerate
+rooftop solar adoption. The goal is to shift households from dependency on
+highly subsidised free electricity to becoming self-sufficient energy producers.
+Through this program, families like Mihir’s, a local farmer, are eligible for a 50%
+subsidy on 3kW rooftop solar panels, helping them reduce their reliance on
+grid power.
+However, under the current setup, Mihir’s path to solar adoption is a maze of
+disjointed applications and verifications. He applies at three different places
+for subsidy, loan (for the rest of capital) and net-metering connection to his
+energy retailer. The lack of trust in the subsidy ecosystem prompts Mihir to
+submit proof of identity, property ownership, and eligibility, only to face sep-
+arate applications for each. Even after securing approvals, he buys the panels,
+submits proof of purchase, ensures they meet specification requirements, and
+confirms installation with a certified service provider.
+6.1
+Frictionless subsidy distribution
+and effective solarisation
+50Digital Energy GridA vision for a unified energy infrastructureWith DEG, real-time telemetry from Mihir’s new solar system is accessible, with
+Mihir’s digital consent, to both the government and the bank, ensuring trans-
+parency in performance. Once the system is verified as active, his subsidy is
+automatically disbursed, and the loan terms adjust accordingly. The siloed
+steps collapse into a frictionless, auditable flow.
+By removing administrative roadblocks, DEG merges finance, subsidies, and
+energy data, cutting delays and reducing costs. It connects all key actors on a
+single interface, so a process that used to be fraught with paperwork, repeat
+verifications, and mistrust now flows seamlessly, giving Mihir and thousands
+like him a straightforward path to going solar.
+Effective
+Solarisation
+MihirFigure 9.2
+Illustrative diagram of efficient solar subsidy distribution workflow in a DEG environment
+This is an administrative burden for Mihir and a trust challenge for the govern-
+ment, as the absence of real-time verifications slows approvals. To complicate
+matters, the bank that finances Mihir’s solar project needs to see his subsidy
+eligibility and pre-approval status before disbursing the loan—once again in a
+siloed, manual process.
+This is where the Digital Energy Grid (DEG) comes in. Built on common spec-
+ifications and standards, DEG brings the government, banks, utilities, and ser-
+vice providers into one cohesive digital ecosystem. Mihir’s subsidy application
+becomes a single streamlined process—eligibility, approvals, and financing all
+tied together. When he applies for financing, the bank seamlessly verifies his
+pre-approved subsidy status. Certified vendors and skilled installers, each with
+verifiable digital credentials, are discovered and contracted with minimal hassle.
+51Digital Energy GridA vision for a unified energy infrastructureThermostat
+Demand response
+program
+App Rebate
+5%
+38ºC
+Paul Flex
+Increased
+energy
+demand
+Demand flexibility
+Emma
+Paul, a grid operator for a city with high penetration of EVs and air conditioning
+loads, monitors rising electricity demand as summer heat peaks. Tasked with
+maintaining grid stability, Paul partners with a platform called Flex to run a
+citywide demand response (DR) program.
+Emma, a consumer in Paul’s city, uses a bill-payment app called TapPay. Through
+TapPay, she’s enrolled in a program that allows her air conditioner and EV char-
+ger to respond to grid signals. On scorching days when electricity demand
+soars, Paul’s platform automatically sends a message via TapPay, offering Emma
+a small rebate if she allows her thermostat to adjust by a degree or two. Emma
+taps “accept,” and her thermostat dials back slightly—she barely notices. Thou -
+sands of other consumers do the same. This aggregate demand drop relieves
+strain on Paul’s network, preventing brownouts. In return, the city meets its peak
+needs without resorting to pricier generation options.Figure 10. Conceptual example of demand response program flow using DEG-enabled coordination.
+6.2
+Smart grid resilience:
+Enhancing demand response programs
+Later, settlement is equally seamless. Flex aggregates how much load was shed,
+verifying each household’s response through real-time, cryptographically signed
+data from the city’s smart meters. Emma’s discount is automatically credited
+to her TapPay account, and Paul sees a neat, verifiable record of who partic-
+ipated and by how much. In this way, the Digital Energy Grid fosters rapid coor-
+dination among operators, aggregators, and consumers. It unifies the necessary
+data streams—meter readings, price signals, device statuses—into a single trust-
+worthy system, boosting grid resilience and rewarding everyday consumers for
+contributing to stability.
+52Digital Energy GridA vision for a unified energy infrastructureDavid, a resource manager at a major utility, faces a steep evening peak on
+hot days. Historically, the utility might have built expensive grid-scale battery
+systems or fired up peaker plants to meet demand surges. But with the Dig-
+ital Energy Grid, David has a new option: renting spare storage capacity from
+households and businesses.
+Sophia is a homeowner in the utility’s service area. She recently installed a
+behind-the-meter battery to complement her rooftop solar. Through a plat-
+form called PowerLink—which connects to DEG—Sophia can “lease out” part
+of her battery’s unused capacity. She lists her availability and price on the
+platform, visible to David at the utility. On a sweltering evening, David’s mon-
+itoring system flags a sharp peak forecast. He logs onto PowerLink, sees hun-
+dreds of batteries like Sophia’s offering capacity, and instantly dispatches
+them to feed stored energy back into the grid for a few hours. Each household
+or business battery discharges slightly, collectively meeting the peak without
+requiring new infrastructure.
+David
+$$$$$$ $$$$$$
+Increased
+storage energy
+demand
+Sophia
+Cloud energy
+storage
+Powerlink
+Application
+Battery
+storage
+6.3
+Cloud energy storage:
+Unifying distributed assetsFigure 11. Illustrative depiction of unifying energy assets through cloud energy storage.
+Thanks to universal identity and verifiable data, the utility confirms each bat-
+tery’s state of charge and disbursement timeline. Once the event ends, David’s
+system automatically compensates every participant. Sophia notices a credit
+in her energy wallet—her home remains powered, and she’s earned money by
+helping the grid. The result? Lower capital costs for the utility, less strain on the
+grid, and an empowered community of prosumers.
+53Digital Energy GridA vision for a unified energy infrastructureAmit Battery
+storage CC
+tokens
+Carbon
+reduction
+target
+CO 2
+Sarah
+Carbon trading
+marketplace
+Sarah, an environmental compliance officer at a manufacturing firm, is racing
+to meet strict carbon reduction targets. Her company opts to purchase verified
+carbon credits to balance out residual emissions.
+Meanwhile, Amit manages a solar farm in another part of the world, generating
+surplus green electricity and carbon offsets. Under conventional systems, Amit’s
+credits might be locked to a local registry or require cumbersome cross-bor-
+der verifications.
+6.4
+Carbon trading innovation:
+A global carbon marketplaceFigure 12. Illustrative depiction of carbon credit tokenization and trading facilitated by DEG.
+With DEG, Amit’s solar farm is registered with a universal, verifiable identity. Every
+megawatt-hour it produces is securely logged, generating cryptographically
+verifiable carbon credits. Sarah’s firm, located halfway across the globe, can
+discover Amit’s credits on a global carbon marketplace integrated into DEG.
+When Sarah’s company purchases these credits, the transaction and subse-
+quent retirement of credits are automatically recorded. Amit sees immediate
+payment, while regulators on both sides trust the cryptographic audit trail. The
+once-complex cross-border carbon trade now flows seamlessly—no double
+counting, no paper friction, and real proof of offset.
+54Digital Energy GridA vision for a unified energy infrastructureHans, a forward-thinking regulator in a developed country, sees electric vehi-
+cles (EVs) as more than just energy consumers; they’re potential grid resources.
+Working with local distribution companies, Hans launches a vehicle-to-grid
+(V2G) policy pilot.
+Irene, a researcher at an energy innovation lab, uses DEG to test new V2G
+technologies. She enrolls volunteers like Thomas, an EV owner, who charges his
+car overnight. Because Thomas’s EV is recognized by a universal identity in
+DEG, his vehicle can securely share real-time battery info.
+On hot afternoons, the lab’s system signals Thomas’s car to discharge a portion
+of its battery back to the grid for an hour. In exchange, Thomas earns credits
+on his energy bill. Simone, another EV user, times her charging to 2:00 a.m.
+when wind power is abundant. The entire process is orchestrated seamlessly
+through cryptographically verifiable data flows, so Hans’s regulatory office can
+track how much capacity is injected back into the grid.
+At scale, this V2G approach turns thousands of EVs into mini power plants—
+stabilizing the grid, cutting costs, and accelerating the clean energy transition.
+Simone
+2
+Mobile
+Application
+Low-cost
+energy
+availability
+Thomas
+Peer-to-peer
+energy trading
+6.5
+Vehicle-to-grid innovation:
+Smart EV charging initiativeFigure 13. Overview of how vehicle-to-grid systems might interact
+with a DEG enabled infrastructure.
+55Digital Energy GridA vision for a unified energy infrastructureIn a suburban neighbourhood in a country with a high penetration of rooftop
+PV, Maya (an energy producer with a small wind turbine) and Sam (an EV owner)
+decide to transact energy directly. Maya’s turbine often produces surplus power
+at night, while Sam’s EV needs charging at the same time.
+6.6
+Peer-to-peer energy trading:
+Optimizing local value
+Without the Digital Energy Grid, Maya might have sold that surplus to the grid
+at a low feed-in tariff, while Sam would pay regular retail rates to charge. But
+through a peer-to-peer (P2P) trading platform integrated with DEG, Maya
+lists her extra energy at a dynamically adjusted, slightly discounted price.
+Sam’s charger checks the marketplace, sees Maya’s offer, and purchases her
+wind power directly. Both sides benefit—Maya earns more than she would
+from the standard grid rate, Sam saves on charging, and the local grid expe-
+riences less congestion. All transactions, from metering to settlement, are
+recorded with cryptographic certainty, ensuring trust without the overhead
+of traditional intermediaries.
+Sam
+Maya
+Excess
+energy
+Simone
+2
+Mobile
+Application
+Sam
+Peer-to-peer
+energy tradingFigure 14. Illustration of a peer-to-peer solar trading
+environment with verifiable exchange and local balancing.
+07
+DEG and AI:
+A symbiotic relationship
+57Digital Energy GridA vision for a unified energy infrastructureAI models in the energy sector rely heavily on high-quality, accessible data.
+Digitalization has led to exponential data growth—smart meters generate far
+more data than analog ones, and wind turbines may produce over 400 billion
+data points annually. Yet, much of this information is fragmented and hard to
+access, stalling AI research. DEG addresses this by offering shared data models
+and standardized frameworks that allow innovators to access high-fidelity
+datasets under proper permissions. By unifying fragmented data streams into
+verifiable, searchable, and structured datasets, DEG reduces the costs of infer-
+ence and training, thereby enhancing the effectiveness of AI tools used for
+demand prediction and grid optimization. Its layered architecture—spanning
+transaction, information, and energy flows—facilitates microdata generation
+and large-scale sharing, ensuring scalable and efficient AI deployments.
+Data centers are the backbone of AI computations, yet they consume enormous
+amounts of energy. As noted by the IEA director, “there is no AI without energy.”
+Many technology companies are now powering their data centers with renewable
+energy to meet sustainability goals. However, rapid data center construction
+challenges the energy sector to anticipate rising electricity demands, locate
+optimal sites, and integrate these loads into the grid. DEG provides full visibility
+into grid operations and enables micro and bidirectional energy transactions,
+offering real-time monitoring of energy flows. This insight helps technology com-
+panies strategically select data center locations based on regional energy loads,
+renewable availability, and grid stability. DEG also streamlines permitting through
+digital load signatures, programmable policies, and automated monitoring, while
+regulators benefit from real-time, verifiable data feeds that enforce policies with
+cryptographic security.
+Unifying data
+Sustainable data centers
+Artificial intelligence (AI) is emerging as a general-purpose technology—com-
+parable in impact to the steam engine or electricity—that is set to transform
+both the global economy and the energy system. AI advances require cut-
+ting-edge computations and vast, high-quality datasets, raising questions
+about how to meet its increasing energy needs. Simultaneously, AI offers
+opportunities to reshape the energy sector by enhancing grid flexibility, boost-
+ing efficiency, accelerating clean energy adoption, and driving decarbonization
+efforts. In this intertwined landscape, the Digital Energy Grid (DEG) plays a
+pivotal role, powering AI while enabling AI to optimize energy systems.
+7.1
+DEG powers AI
+58Digital Energy GridA vision for a unified energy infrastructureIntegrated measurability within DEG enables technology companies to deter-
+mine in real time whether the power received from the grid comes from
+renewable sources. This precision allows non-urgent tasks to be rescheduled
+to times when renewable energy is available, matching each energy unit to a
+“zero-carbon electron.” Such carbon-aware computing practices not only
+lower energy consumption and emissions but also contribute to grid stabil-
+ity by smoothing demand spikes.
+The increasing decentralization and dynamism of energy systems create com-
+plexity and coordination challenges. DEG overcomes these by unifying frag-
+mented systems, streamlining operations, and reducing coordination overhead.
+When paired with AI-powered automation, everyday energy processes become
+seamlessly optimized in real time. Imagine instructing your home assistant,
+“Minimize my monthly energy costs,” and having it analyze real-time energy
+prices, demand, and supply data to execute secure, immutable micro-contracts
+automatically. This is possible because DEG unifies local P2P energy markets,
+smart appliances, and grid operations.
+Cities, too, can benefit from AI agents managing complex systems. For instance,
+an AI-enabled public transport system integrated with DEG could predict pas-
+senger demand, optimize routes, and manage the charging schedules of elec-
+tric buses. In such a system, an e-bus driver might receive an AI-assisted
+recommendation to locate and reserve the nearest charging station automat-
+ically. Similarly, businesses can use AI agents to automate energy transactions,
+prioritize green energy suppliers, verify credentials, and negotiate contracts—
+all while ensuring regulatory compliance.
+Smart demand response for data centers
+Transactional AI and an agentic energy ecosystem
+DEG’s unified data allows AI models to be trained on large datasets, including
+meteorological forecasts and historical grid usage, to predict energy demand
+with high precision. A smart grid powered by AI can analyze hourly trends to
+identify surges in energy usage and automatically schedule energy distribution.
+Stored surplus energy in batteries, for example, can be deployed during peak
+demand periods, or surplus energy can be sold back to the grid when supply
+exceeds demand. This real-time forecasting and scheduling, enabled by DEG’s
+Demand shifting and scheduling
+7.2
+AI elevates DEG
+59Digital Energy GridA vision for a unified energy infrastructureinteroperability across grids, distributed energy resources (DERs), and smart
+appliances, results in a more resilient and efficient energy market while driving
+further investment in renewable energy.
+One of AI’s most promising applications is predictive maintenance. With DEG
+data, AI can continuously monitor grid performance, detect anomalies, and
+predict failures before they cause major disruptions. This proactive approach
+minimizes downtime and reduces operational costs. Regulators, too, can employ
+AI-driven anomaly detection to monitor data-sharing frameworks, ensuring
+compliance with consent protocols and protecting sensitive information.
+Advanced voice interfaces and chatbots powered by large language models
+(LLMs) help non-experts navigate complex energy systems. For example, a
+community energy manager in a microgrid might simply say, “Balance the load
+to maximize solar energy usage,” and the system, with minimal human super-
+vision, will adjust power distribution autonomously. This integration of natural
+language processing with DEG’s data interoperability makes energy management
+more accessible and transparent.
+Predictive maintenance and anomaly detection
+Seamless user interaction
+7.3
+A symbiotic future
+Artificial intelligence and the Digital Energy Grid are set to mutually reinforce one
+another. AI’s growing computational capabilities and data needs drive the devel-
+opment of sustainable energy infrastructures, while DEG’s robust data-sharing
+and real-time optimization empower AI to become more adaptive and efficient.
+AI models, using data from DEG, can combine satellite imagery with information
+on energy loads and transmission lines to identify optimal locations for solar
+installations and other renewable projects. By mapping grid networks and ana-
+lyzing energy transactions, AI helps optimize the mix of renewable energy sources
+and improve the efficiency of both fossil fuel and renewable power plants. This
+strategic approach supports low-emission policies and accelerates decarbon-
+ization efforts.
+Identifying decarbonisation opportunities
+60Digital Energy GridA vision for a unified energy infrastructureAs Fatih Birol noted, “Balancing AI’s energy demands with its transformative
+potential requires unprecedented cooperation across sectors and borders.”
+The future of energy and AI demands a global effort uniting industry leaders,
+policymakers, and innovators. Through effective integration of AI and energy
+systems, we can reduce emissions, drive sustainability, and generate significant
+social and economic value, ensuring a prosperous and greener future for all.
+Principles for energy and AI
+These principles, as discussed at the IEA Global Conference on Energy
+and AI29, offer a sound framework to unlock the potential of AI vis-à-vis
+the energy sector. A unified energy system that generates useful data,
+is interoperable, transparent and secure makes it possible for efficient
+integration of AI-based solutions in the sector.
+DEG is one such framework that could help realise some of the desirable
+outcomes aligned with these principles.
+Use AI to bolster energy
+security with robust
+cybersecurity and
+flexible grids
+Ensure the energy
+sector can sustainably
+power AI, data centers,
+and digital infrastructure
+Ensure AI does not widen
+digital or energy divides,
+promoting equitable
+transitions
+Adopt supportive policies
+that drive clean energy
+innovation and secure,
+affordable energy
+Foster ongoing global
+collaboration among
+policymakers, industry, tech
+innovators, and civil society
+Enhancing
+energy security
+Enable informed decisions
+through trusted, open access
+to key data metrics
+Transparency
+and data sharing
+Inclusive and consumer
+-centric deployment
+Enabling policies
+and business models
+Continued multi-
+stakeholder dialogue
+No AI without energy
+01 02 03
+04 05 06
+By uniting DEG and AI, these principles are realized, creating energy systems
+that are efficient, secure, inclusive, and transparent.
+08
+An ambitious vision
+meets calibrated action
+62Digital Energy GridA vision for a unified energy infrastructureRegions can begin by integrating the most relevant features. For instance, a
+place already rich in distributed solar might start by assigning digital identities
+to rooftop installations. A grid with widespread smart meters may prioritize
+machine-readable, real-time data for demand response. Since DEG is
+technology-neutral, no single path is forced on every participant.
+Implementations can evolve over time. A utility that initially uses DEG for ver-
+ifying new solar interconnections can expand to real-time market integration
+or advanced services like peer-to-peer energy trading. Once foundational
+elements (universal identity, verifiability, machine-readable metadata) are in
+place, layering advanced capabilities becomes more straightforward.
+Not all markets move in lockstep. Early adopters can pioneer robust governance
+and pilot programs that later adopters build upon. Interoperable protocols
+ensure that even a partial rollout can link up with broader networks elsewhere,
+achieving global reach piece by piece.
+Every region and market stand at a unique juncture. Some countries already
+have advanced digital payment systems, widespread broadband, and robust
+grid automation, while others are still expanding electrification or introducing
+basic metering infrastructure. DEG’s design accommodates this diversity through
+a modular architecture and asynchronous rollout.
+Context-aware adoption
+Future-ready, incremental growth
+Asynchronous timelines
+DEG represents an ambitious concept, aiming to unify energy systems globally
+under a common digital infrastructure. Yet its success depends on practical,
+incremental steps that acknowledge local contexts, variable market readiness,
+and differing policy environments. Balancing ambition with a pragmatic roadmap
+allows the framework to adapt, experiment, and evolve in stages without losing
+sight of the broader objective: a trusted, scalable, and inclusive energy ecosystem.
+8.1
+DEG vision is context-aware,
+future-ready, and asynchronous
+63Digital Energy GridA vision for a unified energy infrastructureA working example of these principles is beginning to take shape through the
+Unified Energy Interface (UEI)30
+, an open network enabled by Beckn Protocol31
+for electric vehicle charging, peer-to-peer trading, and demand-response
+actions. Initiatives like these illustrate how multiple stakeholders across regions
+can gradually align to a shared vision while tackling real-world challenges.
+DEG is neither a single product nor a monolithic technology solution. It is a
+flexible framework that unifies multiple stakeholders, bridging existing systems
+and paving the way for new approaches. It complements ongoing advancements
+in grid infrastructure, hardware design, and energy storage breakthroughs; it
+does not replace them.
+8.2
+DEG as a catalyst for
+a unified energy future
+Addressing climate goals, universal energy access, and rapid demand growth
+also requires major strides in hardware uniformity, grid upgrades, policy reforms,
+and market-based incentives. Physical generation, distribution, and storage
+assets must still be built or retrofitted.
+The digital backbone that DEG offers can magnify the impact of emerging
+technologies. Advanced battery chemistries or new cost-effective solar mod-
+ules become far more valuable when integrated into a coordinated marketplace,
+tracked by verifiable data, and governed by transparent rules. Similarly, local
+pilot programs can scale more easily if they adhere to widely recognized,
+open standards.
+The world’s energy landscape is diverse, with unpredictable changes in eco-
+nomics, politics, and technology. DEG’s modular design is meant to handle this
+uncertainty. A wide array of stakeholders—from city governments to rural coop-
+eratives—can adopt the framework in steps, each focusing on their immediate
+objectives while contributing to a larger, global vision.
+Not a silver bullet
+Amplifier of innovations
+Adjusting to uncertainty
+64Digital Energy GridA vision for a unified energy infrastructurePlease share your
+comments and
+thoughts by scanning
+the QR code below
+energy.becknprotocol.io
+A universal digital infrastructure that touches grids, markets, and consumers at
+scale requires a strong governance model. Public and private innovation can
+thrive on robust public rails that ensure inclusivity, fairness, and competition.
+Effective governance is essential to establish guardrails that protect stakehold-
+ers’ interests without stifling creativity or free market dynamics. By balancing
+regulation with open access, the system should foster equitable opportunities
+while safeguarding against exclusion and promoting sustainable growth.
+A notable strength of DEG is the ability to embed policies directly into the
+infrastructure itself. Regulatory requirements—like emissions caps, dynamic
+tariffs, or renewable portfolio standards—can be encoded as digital rules that
+operate autonomously. This lowers enforcement costs and ensures that com-
+pliance processes scale in tandem with expanding networks. At the same time,
+DEG enables local regulators and governments to maintain autonomy and sov-
+ereignty in implementing the framework within their jurisdictions, ensuring that
+deployment aligns with regional policies, priorities, and energy transition goals.
+Policymakers play a crucial role in shaping resilient digital energy systems by
+fostering innovation, interoperability, and security. This involves creating adapt-
+able regulatory frameworks, promoting open standards for seamless integration,
+and aligning public utilities with the vision of unified energy systems. Encour-
+aging consumer participation and mobilising private sector investment are key
+to driving demand-side flexibility and scaling smart technologies. Additionally,
+robust cybersecurity measures must be prioritised to protect critical infra-
+structure and ensure the resilience of these systems in an increasingly inter-
+connected energy landscape.
+DEG cannot develop in a vacuum. To bring the vision to life, a broad coalition of
+utilities, technology companies, regulators, financiers, and civil society groups
+must unite in shaping the underlying infrastructure. Regardless of where one
+stands in the digital maturity journey, DEG provides a scalable and adaptable
+framework that integrates existing systems while enabling future advancements.
+This paper invites all stakeholders—governments, private enterprises, community
+organizations, and academic institutions—to engage in building and refining the
+DEG approach. Together, the aim is to overhaul the current system’s inefficiencies,
+harness new opportunities, and move toward a more sustainable and equitable
+energy future.
+8.3
+A robust governance framework is
+crucial for transparency and adoption
+8.4
+From vision to action
+65Digital Energy GridA vision for a unified energy infrastructureAppendix
+66Digital Energy GridA vision for a unified energy infrastructureAnnexure: Lessons from Population-
+Scale Digital Infrastructure
+Population-scale digital infrastructure demonstrates how interoperability, uni-
+versality, user-centricity, and modularity can transform economies and enhance
+inclusion. These global examples showcase the impact of innovative, scalable
+systems on financial services, welfare delivery, and economic growth.
+India’s Unified Payments Interface (UPI)
+UPI revolutionised digital payments by enabling micro-level transactions with
+values as low as one cent. Growing from 0.8 billion transactions in January 2018
+to 14.4 billion in July 2024, UPI now handles nearly 80% of India’s digital pay-
+ments32
+. Its success stems from design principles such as interoperability, low
+cost, and ease of access, demonstrating how scalable infrastructure can drive
+financial inclusion, innovation and economic participation.
+Brazil’s Pix payment system
+Pix, launched in November 2020, rapidly expanded digital payment adoption
+in Brazil, adding 71.5 million users by December 2022 and serving 153 million
+individuals (around 75% of the population) and 15 million businesses by March
+2024 33. By focusing on speed, flexibility, and interface standardisation, Pix
+enabled small merchants and startups to thrive, highlighting how infrastructure
+thinking can bridge financial and technological divides.
+Estonia’s X-Road: A pioneer in digital governance
+Estonia’s X-Road, launched in 2001, exemplifies transformative power at scale.
+It has digitised 99% of government services, saving 1,407 years of working time
+each year34
+. This comprehensive digital infrastructure has far-reaching effects:
+attracting global entrepreneurs through e-residency, inspiring similar systems
+in other countries, and positioning Estonia as a leader in digital governance. The
+X-Road system has enabled rapid response during crises and contributed sig-
+nificantly to Estonia’s reputation as an innovative digital society.
+Open networks
+The implementation of Open Transaction Networks (OTNs)35 for commerce, mobil-
+ity and other sectors particularly through the Open Network for Digital Commerce
+(ONDC), exemplifies the lowering of transaction costs and barriers to entry, thereby
+cultivating an environment ripe for innovation, competition and market expansion.
+67Digital Energy GridA vision for a unified energy infrastructureTogether, these initiatives highlight the profound potential of population-scale
+digital infrastructure to drive innovation, improve efficiency, and foster inclusion
+across global economies. These examples offer policymakers actionable insights
+for designing transformative systems in diverse contexts.
+Direct benefit transfers
+Welfare programs leveraging digital infrastructure, such as India’s PAHAL37 for
+LPG subsidies, showcase how direct benefit transfers reduce inefficiencies,
+optimise targeting, and enhance transparency. These systems provide
+valuable models for subsidy reforms in other sectors, such as energy.
+The ONDC (ondc.org)36
+, underpinned by Beckn protocol (becknprotocol.io), is
+pioneering a significant shift in the transaction economy, demonstrating how
+open, protocol-based systems can fundamentally alter market dynamics and
+foster inclusive growth in domestic and global trade.
+68Digital Energy GridA vision for a unified energy infrastructureGlossary
+Technology that stores energy for later use, aiding in grid
+stability and the integration of renewable energy sources.
+Tradable permits that allow the holder to emit a certain
+amount of carbon dioxide, promoting emissions reduction.
+The use of cryptographic techniques to ensure data integrity,
+authenticity, and tamper-proof records.
+The distribution of energy generation and management across
+various smaller systems or entities instead of a central authority.
+Programs enabling consumers to adjust their electricity usage
+during peak demand periods in response to market signals or
+incentives.
+A vision for unified, scalable digital infrastructure that integrates
+physical energy flows with digital information and transaction flows
+across the energy ecosystem.
+Adjusting energy supply and demand in real-time to maintain grid
+stability and efficiency.
+Electricity pricing that fluctuates based on supply and
+demand, encouraging efficient energy usage and integration
+of renewables.
+Business models where energy-related services (e.g., storage,
+optimization) are offered to customers without requiring ownership.
+Systems that monitor, control, and optimize energy use
+and generation.
+Entities that manage the trading, supply, and demand of energy
+within a grid to ensure stability and efficiency.
+The ability of a nation, community, or individual to control and
+manage its energy resources sustainably and independently.
+The shift from fossil fuel-based energy systems to renewable
+and low-carbon energy sources to achieve sustainability goals.
+Bottlenecks in the power system due to limited transmission
+capacity, leading to inefficiencies and increased costs.
+Battery Energy Storage
+System (BESS)
+Carbon Credits
+Cryptographic
+Verifiability
+Decentralisation
+Demand
+Response (DR)
+Digital Energy
+Grid (DEG)
+Dynamic Load
+Balancing
+Dynamic Pricing
+Energy-as-a-
+Service (EaaS)
+Energy Management
+System (EMS)
+Energy Market
+Operator
+Energy Sovereignty
+Energy Transition
+Grid Congestion
+69Digital Energy GridA vision for a unified energy infrastructureGrid Orchestration
+Software
+Interoperability
+Layer 1 and Layer 2
+Standards
+Machine
+Readable Data
+Microgrid
+Negative Pricing
+Peer-to-Peer (P2P)
+Energy Trading
+Programmability
+Smart Meters
+Tools that facilitate the management of distributed energy
+resources and grid operations in real-time.
+The ability of different systems, devices, and organizations to work
+together seamlessly, using common protocols and standards.
+Layer 1: Purpose-specific standards for data formats or systems
+(e.g., JPEG for images). Layer 2: General-purpose frameworks that
+unify and connect Layer 1 standards (e.g., HTML for web content).
+Data formatted in a way that can be automatically processed
+by machines without human intervention, enabling automation
+and analytics.
+A localized group of energy resources and loads that can operate
+independently or in connection with the larger grid.
+Situations where electricity producers must pay to offload excess
+generation due to lack of demand or grid constraints.
+A decentralized model where individuals or entities trade energy
+directly without intermediaries.
+The capacity to configure, control, and automate energy
+transactions and operations digitally.
+Digital devices that measure and report electricity usage in
+real-time, enabling better energy management and billing.
+Carbon credits represented as digital tokens, allowing for
+efficient trading and verification.
+A unique, verifiable identifier assigned to energy assets, actors,
+and systems to ensure interoperability and traceability.
+Technology that allows energy to be returned from electric
+vehicle batteries to the grid during peak demand.
+A unit of power equal to one billion watts, commonly used to
+measure the output of large power plants or the capacity of
+electricity grids.
+A unit of energy equal to one trillion watt-hours, often used
+to describe the annual electricity consumption of countries
+or large systems.
+Tokenised
+Carbon Credits
+Universal Identity
+Vehicle-to-Grid (V2G)
+GW (Gigawatt)
+TWh (Terawatt-hour)
+70Digital Energy GridA vision for a unified energy infrastructureBibliography
+1 - 8, 13 - 15, 17, 25 - Iea. (n.d.-aa). World Energy Outlook
+2024 – Analysis. Retrieved from https://www.iea.org/
+reports/world-energy-outlook-2024
+9 - Iea. (n.d.-n). Why AI and energy are the new power
+couple – Analysis. Retrieved from https://www.iea.org/
+commentaries/why-ai-and-energy-are-the-new-
+power-couple
+10 - Iea. (n.d.-b). At major IEA conference, decision-
+makers from tech, energy and government underscore
+AI’s implications for energy security and transitions
+- News. Retrieved from https://www.iea.org/news/
+at-major-iea-conference-decision-makers-from-
+tech-energy-and-government-underscore-ais-
+implications-for-energy-security-and-transitions
+11 - Iea. (n.d.-c). Data centres & networks. Retrieved
+from https://www.iea.org/energy-system/buildings/
+data-centres-and-data-transmission-networks
+12 - (N.d.). Powering Intelligence: Analyzing Artificial
+Intelligence and Data Center Energy Consumption.
+Retrieved from https://www.epri.com/research/
+products/000000003002028905
+16 - Iea. (n.d.-c). Batteries and Secure Energy
+Transitions – Analysis. Retrieved from https://www.iea.
+org/reports/batteries-and-secure-energy-transitions
+18 - Iea. (n.d.-d). Digitalisation - Energy System.
+Retrieved from https://www.iea.org/energy-system/
+decarbonisation-enablers/digitalisation
+19 - AGL Virtual Trial of Peer-to-Peer Energy Trading.
+(2020). Retrieved from https://arena.gov.au/projects/
+agl-virtual-trial-peer-to-peer-trading/
+20 - INCENTIVES. (n.d.). Retrieved from https://www.
+oregon.gov/energy/Incentives/Pages/OSSRP-For-
+Homeowners.aspx
+21, 23 - Iea. (n.d.-e). Electricity Grids and Secure Energy
+Transitions – Analysis. Retrieved from https://www.iea.
+org/reports/electricity-grids-and-secure-energy-
+transitions
+22 - Iea. (n.d.-g). Electricity Mid-Year Update -
+July 2024 – Analysis. Retrieved from https://www.iea.
+org/reports/electricity-mid-year-update-july-2024
+24 - Iea. (n.d.-j). Renewables 2024 – Analysis.
+Retrieved from https://www.iea.org/reports/
+renewables-2024
+26 - Issokson, M. (2024). The state of US distributed
+solar-plus-storage. Retrieved from https://www.
+woodmac.com/news/opinion/the-state-of-us-
+distributed-solar-plus-storage/
+27 - Octopus Energy unveils “Project Mercury” –
+a global vision for a smart energy tech ecosystem.
+(n.d.). Retrieved from https://octopus.energy/press/
+project-mercury/
+28 - Finternet. (2025). Retrieved from
+https://finternetlab.io/
+29 - Iea. (n.d.). Chair’s Summary of the High-Level
+Roundtable on Energy & AI - News. Retrieved from
+https://www.iea.org/news/chair-s-summary-of-the-
+high-level-roundtable-on-energy-and-ai
+30 - UEI Alliance. (n.d.). Retrieved from
+https://ueialliance.org/
+31 - Beckn Protocol. (n.d.). Retrieved from
+https://becknprotocol.io/
+32 - Decoding India’s UPI phenomenon: A digital
+revolution with global implications. (n.d.). Retrieved from
+https://www.orfonline.org/english/expert-speak/
+decoding-india-s-upi-phenomenon-a-digital-
+revolution-with-global-implications
+33 - Carlos Brandt works for the Central Bank of Brazil
+as the Head of Management and Operation for Pix.
+(n.d.). Pix: the latest updates on Brazil’s leading
+instant payment scheme. Retrieved from https://www.
+europeanpaymentscouncil.eu/news-insights/insight/
+pix-latest-updates-brazils-leading-instant-payment-
+scheme
+34 - Estonian Interoperability Framework X-Road (n.d.).
+Retrieved from https://cyber.ee/resources/case-
+studies/estonian-interoperability-framework-x-road/
+35 - What is an Open Transaction Network and
+how does it thrive? (n.d.). Retrieved from https://www.
+weforum.org/stories/2024/03/open-transaction-
+networks-what-are-they-and-what-do-they-mean-
+for-the-new-era/
+36 - Open Network for Digital Commerce. (n.d.).
+Retrieved from https://ondc.org/
+37 - MARKETING - PAHAL: Ministry of Petroleum and
+Natural Gas: Government of India. (n.d.). Retrieved from
+https://mopng.gov.in/en/marketing/pahal
+With contributions from
+Please share your
+comments and thoughts
+by scanning the QR code
+energy.becknprotocol.io
