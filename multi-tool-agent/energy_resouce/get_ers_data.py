@@ -1,7 +1,7 @@
 import os
 import requests
 
-def get_er_data():
+def get_ers_data():
     """
     Sends a GET request to $STRAPI_URL/energy-resources?sort[0]=createdAt:desc&pagination[page]=1&populate[0]=meter&pagination[pageSize]=100
     to retrieve energy resource data.

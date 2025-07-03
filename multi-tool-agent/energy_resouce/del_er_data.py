@@ -1,7 +1,7 @@
 import os
 import requests
 
-def delete_energy_resource(er_id):
+def del_er_data(er_id):
     """
     Sends a DELETE request to $STRAPI_URL/energy-resources/{id} to delete a specific Energy Resource.
 

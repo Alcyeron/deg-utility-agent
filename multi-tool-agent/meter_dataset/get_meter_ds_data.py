@@ -1,7 +1,7 @@
 import os
 import requests
 
-def get_meter_dataset(dataset_id):
+def get_meter_ds_data(dataset_id):
     """
     Sends a GET request to $STRAPI_URL/meter-datasets/{id} to fetch a specific meter dataset.
 

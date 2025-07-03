@@ -2,7 +2,7 @@ import os
 import requests
 import json
 
-def patch_energy_resource(er_id, update_fields):
+def patch_er_data(er_id, update_fields):
     """
     Sends a PATCH request to $STRAPI_URL/energy-resources/{id} to update an Energy Resource entry.
 

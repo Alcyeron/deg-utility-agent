@@ -2,7 +2,7 @@ import os
 import requests
 import json
 
-def create_energy_resource(er_data):
+def post_er_data(er_data):
     """
     Sends a POST request to $STRAPI_URL/energy-resources to create a new Energy Resource.
 
