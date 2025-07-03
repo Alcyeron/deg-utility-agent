@@ -27,10 +27,10 @@ from .meter.post_meter_data import create_meter
 from .meter_dataset.get_meter_ds_data import get_meter_ds_data
 
 root_agent = Agent(
-    name="DEG Utility Dashboard Agent",
+    name="utility_dashboard_agent",
     model="gemini-2.0-flash",
     description=(
-        "Agent to answer questions about the time and weather in a city."
+        "Agent to answer questions about the utility dashboard."
     ),
     instruction=(
         "You are a helpful agent who can answer user questions about the time and weather in a city."
