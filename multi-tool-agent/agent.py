@@ -22,3 +22,31 @@ from .meter.post_meter_data import create_meter
 
 # meter_dataset
 from .meter_dataset.get_meter_ds_data import get_meter_ds_data
+
+root_agent = Agent(
+    name="DEG Utility Dashboard Agent",
+    model="gemini-2.0-flash",
+    description=(
+        "Agent to answer questions about the time and weather in a city."
+    ),
+    instruction=(
+        "You are a helpful agent who can answer user questions about the time and weather in a city."
+    ),
+    tools=[
+        post_toggle_der_data,
+        get_dfp_data,
+        patch_dfp_data,
+        get_er_data,
+        get_ers_data,
+        del_er_data,
+        patch_er_data,
+        post_er_data,
+        delete_meter,
+        get_meter_by_id,
+        get_all_meters,
+        patch_meter_data,
+        control_meter,
+        create_meter,
+        get_meter_ds_data,
+    ],
+)
