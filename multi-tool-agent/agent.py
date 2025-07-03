@@ -52,17 +52,3 @@ root_agent = Agent(
         get_meter_ds_data,
     ],
 )
-
-def patch_dfp_data(id: int, is_active: bool) -> dict:
-    """
-    Patch DFP data.
-
-    Args:
-        id (int): The unique identifier.
-        is_active (bool): The active status.
-
-    Returns:
-        dict: Status of the operation.
-    """
-    input_dict = {"id": id, "is_active": is_active}
-    # ... rest of your code ...
