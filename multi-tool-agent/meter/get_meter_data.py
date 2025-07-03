@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def get_meter_by_id(meter_id):
+def get_meter_by_id(meter_id: int) -> Dict[str, Any]:
     """
     Sends a GET request to $STRAPI_URL/meters/{id} to fetch a single meter entry with populated relations.
 

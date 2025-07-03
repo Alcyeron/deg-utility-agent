@@ -1,26 +1,29 @@
 import os
 import requests
 import json
+from typing import List, Optional
 
-def post_er_data(er_data):
+def post_er_data(name: str, type: str, meter: Optional[int], appliances: List[str]) -> dict:
     """
     Sends a POST request to $STRAPI_URL/energy-resources to create a new Energy Resource.
 
     Args:
-        er_data (dict): A dictionary of fields to create the energy resource.
-            Example:
-                {
-                    "name": "ABC's Home",
-                    "type": "PROSUMER",
-                    "meter": None,
-                    "appliances": ["Air Conditioner (1.5 Ton)"]
-                }
+        name (str): Name of the energy resource.
+        type (str): Type of the energy resource.
+        meter (int or None): Meter ID or None.
+        appliances (List[str]): List of appliances.
 
     Returns:
         dict: {'status': 'success', 'data': ...} if creation succeeded,
               {'status': 'failure', 'error': ...} otherwise.
     """
-    strapi_url = os.environ.get('STRAPI_URL')  # e.g., http://localhost:1337/meter-data-simulator
+    er_data = {
+        "name": name,
+        "type": type,
+        "meter": meter,
+        "appliances": appliances
+    }
+    strapi_url = os.environ.get('STRAPI_URL')
     if not strapi_url:
         return {'status': 'failure', 'error': 'STRAPI_URL not set in environment'}
 

@@ -1,32 +1,44 @@
 import os
 import requests
 import json
+from typing import Optional
 
-def create_meter(input_dict):
+def create_meter(code: str, parent: Optional[int], energyResource: int, consumptionLoadFactor: float, productionLoadFactor: float, type: str, city: str, state: str, latitude: float, longitude: float, pincode: str) -> dict:
     """
-    Sends a POST request to $STRAPI_URL/meters with the input_dict as JSON.
+    Sends a POST request to $STRAPI_URL/meters with the provided arguments as JSON.
     Returns a dictionary with a 'status' field: 'success' if created, else 'failure'.
 
     Args:
-        input_dict: A dictionary containing the meter data to be created.
-            Example keys:
-                code (str)
-                parent (int or None)
-                energyResource (int)
-                consumptionLoadFactor (float)
-                productionLoadFactor (float)
-                type (str)
-                city (str)
-                state (str)
-                latitude (float)
-                longitude (float)
-                pincode (str)
+        code (str): Meter code.
+        parent (Optional[int]): Parent meter ID or None.
+        energyResource (int): Energy resource ID.
+        consumptionLoadFactor (float): Consumption load factor.
+        productionLoadFactor (float): Production load factor.
+        type (str): Meter type.
+        city (str): City.
+        state (str): State.
+        latitude (float): Latitude.
+        longitude (float): Longitude.
+        pincode (str): Postal code.
 
     Returns:
         dict: {'status': 'success', 'data': ...} if creation was successful,
               {'status': 'failure', 'error': ...} otherwise.
     """
-    strapi_url = os.environ.get('STRAPI_URL')  # e.g., http://localhost:1337/meter-data-simulator
+    input_dict = {
+        "code": code,
+        "parent": parent,
+        "energyResource": energyResource,
+        "consumptionLoadFactor": consumptionLoadFactor,
+        "productionLoadFactor": productionLoadFactor,
+        "type": type,
+        "city": city,
+        "state": state,
+        "latitude": latitude,
+        "longitude": longitude,
+        "pincode": pincode
+    }
+    strapi_url = os.environ.get('STRAPI_URL')
     if not strapi_url:
         return {'status': 'failure', 'error': 'STRAPI_URL not set in environment'}
 

@@ -1,27 +1,31 @@
 import os
 import requests
 import json
+from typing import Optional
 
-def control_meter(control_data):
+def control_meter(meter_id: str, parent_meter_id: Optional[str], pincode: str, load_factor: float, log_type: str) -> dict:
     """
     Sends a POST request to $STRAPI_URL/meters/control to simulate meter control (e.g., load adjustment).
 
     Args:
-        control_data (dict): Control payload to send.
-            Example:
-                {
-                    "meter_id": "METER003",
-                    "parent_meter_id": None,
-                    "pincode": "",
-                    "load_factor": 0.82,
-                    "log_type": "CONSUMER"
-                }
+        meter_id (str): Meter ID.
+        parent_meter_id (Optional[str]): Parent meter ID or None.
+        pincode (str): Postal code.
+        load_factor (float): Load factor.
+        log_type (str): Log type (e.g., 'CONSUMER').
 
     Returns:
         dict: {'status': 'success', 'data': ...} if control action succeeded,
               {'status': 'failure', 'error': ...} otherwise.
     """
-    strapi_url = os.environ.get('STRAPI_URL')  # e.g., http://localhost:1337/meter-data-simulator
+    control_data = {
+        "meter_id": meter_id,
+        "parent_meter_id": parent_meter_id,
+        "pincode": pincode,
+        "load_factor": load_factor,
+        "log_type": log_type
+    }
+    strapi_url = os.environ.get('STRAPI_URL')
     if not strapi_url:
         return {'status': 'failure', 'error': 'STRAPI_URL not set in environment'}
 

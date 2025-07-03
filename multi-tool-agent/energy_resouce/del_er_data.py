@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def del_er_data(er_id):
+def del_er_data(er_id: int) -> Dict[str, Any]:
     """
     Sends a DELETE request to $STRAPI_URL/energy-resources/{id} to delete a specific Energy Resource.
 

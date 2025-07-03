@@ -1,8 +1,9 @@
 import os
 import requests
 import json
+from typing import Dict, Any
 
-def patch_meter_data(meter_id, update_fields):
+def patch_meter_data(meter_id: int, update_fields: Dict[str, Any]) -> Dict[str, Any]:
     """
     Sends a PATCH request to $STRAPI_URL/meters/{id} with the update_fields as JSON.
 

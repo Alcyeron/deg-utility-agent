@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def get_dfp_data():
+def get_dfp_data() -> Dict[str, Any]:
     """
     Sends a GET request to $STRAPI_URL/dfp to retrieve DFP data.
     Returns:

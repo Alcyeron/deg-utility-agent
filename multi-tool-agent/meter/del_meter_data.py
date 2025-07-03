@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def delete_meter(meter_id):
+def delete_meter(meter_id: int) -> Dict[str, Any]:
     """
     Sends a DELETE request to $STRAPI_URL/meters/{id} to delete a specific meter entry.
 

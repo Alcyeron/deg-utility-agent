@@ -2,18 +2,18 @@ import os
 import requests
 import json
 
-def patch_dfp_data(input_dict):
+def patch_dfp_data(id: int, is_active: bool) -> dict:
     """
-    Sends a PATCH request to $STRAPI_URL/dfp with the input_dict as JSON.
-    Returns a dictionary with a 'status' field: 'success' if updated, else 'failure'.
+    Patch DFP data.
+
     Args:
-        input_dict: A dictionary containing the data to be patched.
-            keys:
-                id (int): The unique identifier for the DFP entry.
-                is_active (bool): The active status to be set for the DFP entry.
+        id (int): The unique identifier.
+        is_active (bool): The active status.
+
     Returns:
-        A dictionary with a 'status' field: 'success' if updated, else 'failure'.
+        dict: Status of the operation.
     """
+    input_dict = {"id": id, "is_active": is_active}
     strapi_url = os.environ.get('STRAPI_URL')
     if not strapi_url:
         return {'status': 'failure', 'error': 'STRAPI_URL not set in environment'}

@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def get_all_meters(page=1, page_size=25):
+def get_all_meters(page: int = 1, page_size: int = 25) -> Dict[str, Any]:
     """
     Sends a GET request to $STRAPI_URL/meters to fetch all meters with populated relations.
     

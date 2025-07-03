@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def get_meter_ds_data(dataset_id):
+def get_meter_ds_data(dataset_id: int) -> Dict[str, Any]:
     """
     Sends a GET request to $STRAPI_URL/meter-datasets/{id} to fetch a specific meter dataset.
 

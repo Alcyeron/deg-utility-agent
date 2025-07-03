@@ -1,7 +1,8 @@
 import os
 import requests
+from typing import Dict, Any
 
-def get_er_data():
+def get_er_data() -> Dict[str, Any]:
     """
     Sends a GET request to $STRAPI_URL/energy-resources?sort[0]=createdAt:desc&pagination[page]=1&populate[0]=meter&pagination[pageSize]=100
     to retrieve energy resource data.

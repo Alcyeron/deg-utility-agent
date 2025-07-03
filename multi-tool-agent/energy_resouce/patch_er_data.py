@@ -1,29 +1,26 @@
 import os
 import requests
 import json
+from typing import List
 
-def patch_er_data(er_id, update_fields):
+def patch_er_data(er_id: int, meter: int, appliances: List[str]) -> dict:
     """
-    Sends a PATCH request to $STRAPI_URL/energy-resources/{id} to update an Energy Resource entry.
+    Sends a PATCH request to $STRAPI_URL/energy-resources/{er_id} to update an Energy Resource entry.
 
     Args:
         er_id (int): The ID of the energy resource to update.
-        update_fields (dict): A dictionary of fields to update inside the "data" object.
-            Example:
-                {
-                    "meter": 1,
-                    "appliances": [
-                        "Ceiling Fan",
-                        "Solar Panel (production)",
-                        "Air Conditioner (1.5 Ton)"
-                    ]
-                }
+        meter (int): Meter ID to update.
+        appliances (List[str]): List of appliances to update.
 
     Returns:
         dict: {'status': 'success', 'data': ...} if update succeeded,
               {'status': 'failure', 'error': ...} otherwise.
     """
-    strapi_url = os.environ.get('STRAPI_URL')  # e.g., http://localhost:1337/meter-data-simulator
+    update_fields = {
+        "meter": meter,
+        "appliances": appliances
+    }
+    strapi_url = os.environ.get('STRAPI_URL')
     if not strapi_url:
         return {'status': 'failure', 'error': 'STRAPI_URL not set in environment'}
 
