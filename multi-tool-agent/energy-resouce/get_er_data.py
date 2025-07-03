@@ -1,17 +1,15 @@
 import os
 import requests
 
-def get_er_data(id):
+def get_er_data():
     """
-    Sends a GET request to $STRAPI_URL/energy-resources/{id}?populate[0]=meter.parent&populate[1]=meter.children&populate[2]=meter.appliances
-    to retrieve a specific energy resource by id.
-    Args:
-        id (int): The unique identifier for the energy resource.
+    Sends a GET request to $STRAPI_URL/energy-resources?sort[0]=createdAt:desc&pagination[page]=1&populate[0]=meter&pagination[pageSize]=100
+    to retrieve energy resource data.
     Returns:
         A dictionary with:
             - 'status': 'success' if data is retrieved, else 'failure'
-            - 'data': energy resource dictionary if successful, else None
-                The energy resource dictionary contains:
+            - 'data': list of energy resource dictionaries if successful, else None
+                Each energy resource dictionary contains:
                     - id (int): Unique identifier for the energy resource
                     - name (str): Name of the energy resource
                     - type (str): Type of the energy resource (e.g., 'CONSUMER')
@@ -34,38 +32,18 @@ def get_er_data(id):
                         - publishedAt (str): ISO timestamp of meter publication
                         - max_capacity_KW (int): Maximum capacity in kilowatts
                         - dfp_subscription_id (any): DFP subscription ID or null
-                        - children (list): List of child meters (could be empty)
-                        - parent (dict or None): Parent meter or None
-    Example success response:
-        {
-            "message": "Energy resource fetched successfully",
-            "data": { ... }
-        }
-    Example error response:
-        {
-            "data": null,
-            "error": {
-                "status": 404,
-                "name": "NotFoundError",
-                "message": "Energy resource not found",
-                "details": {}
-            }
-        }
     """
     strapi_url = os.environ.get('STRAPI_URL')
     if not strapi_url:
         return {'status': 'failure', 'error': 'STRAPI_URL not set in environment', 'data': None}
 
-    url = f"{strapi_url}/energy-resources/{id}?populate[0]=meter.parent&populate[1]=meter.children&populate[2]=meter.appliances"
+    url = f"{strapi_url}/energy-resources?sort[0]=createdAt:desc&pagination[page]=1&populate[0]=meter&pagination[pageSize]=100"
     try:
         response = requests.get(url)
         response_json = response.json()
-        if response_json.get('message') == 'Energy resource fetched successfully' and 'data' in response_json and response_json['data']:
-            return {'status': 'success', 'data': response_json['data']}
+        if response_json.get('message') == 'Energy resources fetched successfully' and 'data' in response_json and 'results' in response_json['data']:
+            return {'status': 'success', 'data': response_json}
         else:
-            error_msg = None
-            if 'error' in response_json and 'message' in response_json['error']:
-                error_msg = response_json['error']['message']
-            return {'status': 'failure', 'data': None, 'error': error_msg}
+            return {'status': 'failure', 'data': None}
     except Exception as e:
         return {'status': 'failure', 'error': str(e), 'data': None}

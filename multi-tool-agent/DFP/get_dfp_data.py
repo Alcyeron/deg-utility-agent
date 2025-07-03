@@ -27,7 +27,7 @@ def get_dfp_data():
         response = requests.get(url)
         response_json = response.json()
         if 'data' in response_json:
-            return {'status': 'success', 'data': response_json['data']}
+            return {'status': 'success', 'data': response_json}
         else:
             return {'status': 'failure', 'data': None}
     except Exception as e:
