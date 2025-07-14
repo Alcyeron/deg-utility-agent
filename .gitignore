@@ -1,1 +1,2 @@
 multi-tool-agent/.env
+*/*/*pycache*
