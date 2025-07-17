@@ -20,6 +20,7 @@ from .grid.post_modify_node import post_modify_node
 from .grid.post_delete_node import post_delete_node
 from .grid.post_save_cache import post_save_cache
 from .grid.post_load_cache import post_load_cache
+from .grid.get_dfps_by_neighbourhood import  get_dfps_by_transformer
 # grid_dfp tools
 from .grid_dfp.post_register_dfp import post_register_dfp
 from .grid_dfp.get_dfp_details import get_dfp_details
@@ -55,6 +56,7 @@ root_agent = Agent(
         "- Modify the load of a neighbourhood or an individual household using a specified reduction factor.\n"
         "- Add, modify, or delete a household (bus/node).\n"
         "- Save or load the current grid state to/from a cache file.\n"
+        "- Retrieve DFPs by transformer, ranked by the number of households subscribed in the transformer's neighbourhood.\n"
         "- Register a new Demand Flexibility Program (DFP) with specific parameters.\n"
         "- Retrieve details of all registered DFPs.\n"
         "- Search DFPs by attribute or by range of min_power_kw, target_pf, or registration date.\n"
@@ -78,6 +80,7 @@ root_agent = Agent(
         "- Use `post_delete_node` to delete a household (bus/node).\n"
         "- Use `post_save_cache` to save the current grid state to a cache file.\n"
         "- Use `post_load_cache` to load the grid state from a cache file.\n"
+        "- Use `get_dfps_by_transformer` to retrieve DFPs by transformer, ranked by the number of households subscribed in the transformer's neighbourhood.\n"
         "- Use `post_register_dfp` to register a new Demand Flexibility Program.\n"
         "- Use `get_dfp_details` to retrieve details of all registered DFPs.\n"
         "- Use `search_dfp_by_attribute` to search DFPs by attribute.\n"
@@ -114,6 +117,7 @@ root_agent = Agent(
         post_delete_node,
         post_save_cache,
         post_load_cache,
+        get_dfps_by_transformer,
         post_register_dfp,
         get_dfp_details,
         search_dfp_by_attribute,
