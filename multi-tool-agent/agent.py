@@ -35,7 +35,7 @@ from .grid_dfp.delete_dfp import delete_dfp
 
 root_agent = Agent(
     name="utility_dashboard_agent",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-pro",
     description=(
         "Agent to answer questions about the utility dashboard."
     ),
